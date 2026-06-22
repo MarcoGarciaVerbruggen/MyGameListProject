@@ -1,2 +1,2 @@
 # MyGameListProject
-Game database and 
+Community-driven videogame database and completion tracking
