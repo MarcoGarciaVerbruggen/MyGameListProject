@@ -1,34 +1,34 @@
 ---
 name: User Story
 about: Detail User Story requirements and implementation steps
-title: "[US#XX] Story Title"
-labels: documentation, enhancement
+title: US#[XXX] [Story Title]
+labels: enhancement
 assignees: ''
 
 ---
 
-# US#[XX]
-- Actor: [Actor]
-- Goal: [Goal]
-- Reason: [Reason]
-(Optional)[Long description]
+# US#[XXX]
+- **Actor**: ["As a ___ ..."]
+- **Goal**: ["... I want to ____ ..."]
+- **Reason**: ["... in order to _____."]
+- **Long description**: [Long description] (Optional)
 
-## Criteria
-- [ ] (Optional)Context: [Relevant context]; Condition: [Triggering condition]; Result: [Desired result];
+## Acceptance Criteria
+- [ ] **Context**: [Relevant context]; **Condition**: [Triggering condition]; **Result**: [Desired result];
 - [ ] ...
 
 ## Definition of Done
-- [ ] All acceptance criteria are met
-- [ ] Full design documentation
-- [ ] Passes all pipeline tests
-- [ ] Passes code review
+- [ ] Acceptance criteria met
+- [ ] Design documentation
+- [ ] Tests pass
+- [ ] Code review passes
 
 ## Tasks
-- [ ] [Subtask title]
+- [ ] US#[XXX] Design
+- [ ] US#[XXX] [implementation subtask]
 - [ ] ...
+- [ ] US#[XXX] Testing
 
-## (Optional) Dependencies
-- [ ] (Optional) Feature: [Issue]
-- [ ] ...
-- [ ] (Optional) Bugfix: [Issue]
-- [ ] ...
+## Dependencies (Optional)
+- Blocks: 
+- Depends on:
