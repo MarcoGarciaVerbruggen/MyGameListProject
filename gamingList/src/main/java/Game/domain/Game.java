@@ -1,0 +1,34 @@
+package Game.domain;
+
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+import java.util.List;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Game {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Embedded
+    private Name name;
+
+    @Embedded
+    private CoverUrl coverUrl;
+
+    @Embedded
+    private Description description;
+
+    @ManyToMany
+    private List<Tags> tags;
+
+    @Embedded
+    private Score score;
+}
