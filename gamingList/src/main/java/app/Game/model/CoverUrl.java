@@ -1,4 +1,4 @@
-package Game.domain;
+package app.Game.model;
 
 import jakarta.persistence.Embeddable;
 

@@ -1,4 +1,4 @@
-package Game.domain;
+package app.Game.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -9,11 +9,12 @@ import lombok.AllArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Tags {
+public class Publisher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tag;
+    @Embedded
+    private CompanyID company;
 }

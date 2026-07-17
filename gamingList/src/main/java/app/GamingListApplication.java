@@ -1,4 +1,4 @@
-package com.example.gaminglist;
+package app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class GamingListApplication {
     public static void main(String[] args) {
         SpringApplication.run(GamingListApplication.class, args);
     }
-
 }

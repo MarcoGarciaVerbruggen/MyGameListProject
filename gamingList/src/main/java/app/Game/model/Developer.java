@@ -1,4 +1,4 @@
-package Game.domain;
+package app.Game.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -11,25 +11,15 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Game {
+public class Developer {
 
-    // major detail here
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Embedded
-    private Name name;
+    private CompanyID company;
 
-    @Embedded
-    private CoverUrl coverUrl;
-
-    @Embedded
-    private Description description;
-
-    @ManyToMany
-    private List<Tags> tags;
-
-    @Embedded
-    private Score score;
+    @OneToMany
+    private List<Staff> staff;
 }
