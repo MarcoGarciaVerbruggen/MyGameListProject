@@ -1,6 +1,13 @@
 # Prerequisites
 *.d
 
+# IDE and Workspace specific files
+.idea/*
+*.iml
+.vscode/
+*.swp
+*.swo
+
 # Compiled Object files
 *.slo
 *.lo
