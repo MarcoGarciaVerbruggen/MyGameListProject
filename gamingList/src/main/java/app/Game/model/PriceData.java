@@ -17,9 +17,9 @@ public class PriceData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private float value;
+    private float price;
 
-    private Instant date;
+    private Instant timestamp;
 
     private float discount;
 }
