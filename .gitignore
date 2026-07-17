@@ -2,9 +2,9 @@
 *.d
 
 # IDE and Workspace specific files
-.idea/*
+/.idea
 *.iml
-.vscode/
+/.vscode
 *.swp
 *.swo
 
