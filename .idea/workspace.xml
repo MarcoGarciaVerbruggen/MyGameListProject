@@ -4,41 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="initial pipeline configuration + daily meeting User Story template">
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/controller/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/CompanyID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Developer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/ExternalID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/GameID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Link.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PlatformID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PriceData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PriceHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/ProID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/ProRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Publisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Region.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/repository/GameRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/service/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#16 Game Aggregate setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/Game/domain/CoverUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/CoverUrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/Game/domain/Description.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Description.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/Game/domain/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PlatformGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/Game/domain/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Name.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/Game/domain/Score.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/Game/domain/Tags.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Tags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/com/example/gaminglist/GamingListApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/GamingListApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/target/classes/Game/domain/CoverUrl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/target/classes/Game/domain/Description.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/target/classes/Game/domain/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/target/classes/Game/domain/Name.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/target/classes/Game/domain/Score.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/target/classes/Game/domain/Tags.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/target/classes/com/example/gaminglist/GamingListApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/CompanyID.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/CompanyID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/CoverUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/CoverUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/ExternalID.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/ExternalID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PlatformID.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PlatformID.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,69 +45,83 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="bda76883-5f08-448a-9403-910a25aaf048" />
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MarcoGarciaVerbruggen/MyGameListProject.git&quot;,
-    &quot;accountId&quot;: &quot;bda76883-5f08-448a-9403-910a25aaf048&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MarcoGarciaVerbruggen/MyGameListProject.git",
+    "accountId": "bda76883-5f08-448a-9403-910a25aaf048"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "MarcoGarciaVerbruggen",
+    "repository": "MyGameListProject"
   }
-}</component>
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="5.087402306660032E-127" />
-      <entry key="S5" value="6.35127831535455E-51" />
-      <entry key="S10" value="1.5645938029170608E-25" />
-      <entry key="S30" value="1.3519735651959084E-8" />
-      <entry key="S60" value="2.3242300014831186E-4" />
-      <entry key="M2" value="0.030731845554936618" />
-      <entry key="M5" value="0.9092597731815933" />
-      <entry key="M10" value="5.538252247600419" />
-      <entry key="M15" value="12.02434030974105" />
-      <entry key="M30" value="31.089539919472006" />
-      <entry key="H1" value="55.59225913943807" />
-      <entry key="H2" value="77.47953446363405" />
-      <entry key="H4" value="92.8973043921534" />
-      <entry key="D1" value="109.24069087726255" />
-      <entry key="W1" value="112.45155091510198" />
+      <entry key="MS100" value="1.313528471937613" />
+      <entry key="MS500" value="3.7353655777613812" />
+      <entry key="S2" value="10.645347844161813" />
+      <entry key="S5" value="16.82165889953741" />
+      <entry key="S10" value="20.30690162500737" />
+      <entry key="S30" value="23.274950984085017" />
+      <entry key="S60" value="24.173054170038576" />
+      <entry key="M2" value="25.28522142269317" />
+      <entry key="M5" value="28.290655344492798" />
+      <entry key="M10" value="30.789337513842618" />
+      <entry key="M15" value="32.04468809363564" />
+      <entry key="M30" value="36.09056612410872" />
+      <entry key="H1" value="50.668128509476" />
+      <entry key="H2" value="76.81228533159951" />
+      <entry key="H4" value="103.3801755470854" />
+      <entry key="D1" value="138.820893136657" />
+      <entry key="W1" value="146.63744610121657" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000000029636729" />
-      <entry key="S60" value="1.000054439666088" />
-      <entry key="M2" value="1.0073846957713866" />
-      <entry key="M5" value="1.1486922467511929" />
-      <entry key="M10" value="1.4660083579920495" />
-      <entry key="M15" value="1.7225593006277558" />
-      <entry key="M30" value="2.1713137390282866" />
-      <entry key="H1" value="2.520189906339202" />
-      <entry key="H2" value="2.7406705600902788" />
-      <entry key="H4" value="2.8650302987585765" />
-      <entry key="D1" value="2.976726551160434" />
-      <entry key="W1" value="2.9966555865084024" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="2.6348814057758E-190" />
+      <entry key="S30" value="6.410920020171987E-64" />
+      <entry key="S60" value="2.53211730313988E-32" />
+      <entry key="M2" value="1.6029701611008142E-16" />
+      <entry key="M5" value="5.506754628596302E-7" />
+      <entry key="M10" value="0.0010150383808251652" />
+      <entry key="M15" value="0.01348149930712025" />
+      <entry key="M30" value="0.1920899247177544" />
+      <entry key="H1" value="0.7495908399625297" />
+      <entry key="H2" value="1.4946941548690809" />
+      <entry key="H4" value="2.115811483386058" />
+      <entry key="D1" value="2.830068188449409" />
+      <entry key="W1" value="2.9751046986586904" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="5.394796609394432E-6" />
-      <entry key="MS500" value="0.08838834764831845" />
-      <entry key="S2" value="0.5452538663326288" />
-      <entry key="S5" value="0.7845840978967508" />
-      <entry key="S10" value="0.8857675191023606" />
-      <entry key="S30" value="0.9603729612722437" />
-      <entry key="S60" value="0.9802706873698325" />
-      <entry key="M2" value="1.0278994020576935" />
-      <entry key="M5" value="2.0526725741399297" />
-      <entry key="M10" value="7.000430936927593" />
-      <entry key="M15" value="13.74375178424243" />
-      <entry key="M30" value="33.2587328400814" />
-      <entry key="H1" value="58.11108785001487" />
-      <entry key="H2" value="80.21935038458024" />
-      <entry key="H4" value="95.76182592747644" />
-      <entry key="D1" value="112.21731469075661" />
-      <entry key="W1" value="115.44819125797437" />
+      <entry key="MS100" value="1.2386129062047435" />
+      <entry key="MS500" value="3.6881106472192156" />
+      <entry key="S2" value="10.611537931828819" />
+      <entry key="S5" value="16.800220651900258" />
+      <entry key="S10" value="20.293933117454547" />
+      <entry key="S30" value="23.26998716992781" />
+      <entry key="S60" value="24.17047500479987" />
+      <entry key="M2" value="25.283872357346972" />
+      <entry key="M5" value="28.29005335085048" />
+      <entry key="M10" value="30.79002271733561" />
+      <entry key="M15" value="32.05791878301545" />
+      <entry key="M30" value="36.282350541661984" />
+      <entry key="H1" value="51.41725417286841" />
+      <entry key="H2" value="78.30648286669468" />
+      <entry key="H4" value="105.49559595625111" />
+      <entry key="D1" value="141.6508610766279" />
+      <entry key="W1" value="149.61253529803096" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -165,7 +150,7 @@
     "Spring Boot.GamingListApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "feat/us002-Review-System",
+    "git-widget-placeholder": "#24 on feat/us002-Review-System",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -249,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784113516680</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#16 Game Aggregate setup">
+      <option name="closed" value="true" />
+      <created>1784298262500</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784298262500</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +252,7 @@
     <MESSAGE value="spring project setup" />
     <MESSAGE value="class/aggregate example" />
     <MESSAGE value="initial pipeline configuration + daily meeting User Story template" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial pipeline configuration + daily meeting User Story template" />
+    <MESSAGE value="#16 Game Aggregate setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="#16 Game Aggregate setup" />
   </component>
 </project>
