@@ -19,7 +19,7 @@ public class PriceData {
 
     private float price;
 
-    private Instant timestamp;
+    private Instant instant;
 
     private float discount;
 }
