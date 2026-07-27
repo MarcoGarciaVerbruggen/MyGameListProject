@@ -43,8 +43,7 @@ public class Review {
 
     private ReviewStatus status;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "review_id")
+    @OneToMany(mappedBy = "review", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments;
 
     private int upvotes;

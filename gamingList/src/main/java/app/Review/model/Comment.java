@@ -16,9 +16,9 @@ public class Comment {
     @EmbeddedId
     private CommentId commentId;
 
-    @Embedded
-    @AttributeOverride(name = "id", column = @Column(name = "review_id"))
-    private ReviewID originalReview;
+    @ManyToOne
+    @JoinColumn(name = "review_id", nullable = false)
+    private Review review;
 
     @Embedded
     private ReviewBody body;
