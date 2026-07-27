@@ -4,4 +4,4 @@ import jakarta.persistence.Embeddable;
 import java.util.UUID;
 
 @Embeddable
-public record ReviewID(UUID id) {}
+public record ReviewID(UUID ReviewId) {}

@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#16 pipeline fix test">
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/controller/ReviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/CommentId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/MarkdownText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/repository/ReviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/service/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#16 initial Review aggregate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,61 +51,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4357994838365242" />
-      <entry key="MS500" value="2.981959283996938" />
-      <entry key="S2" value="8.291254298791614" />
-      <entry key="S5" value="18.915671591733158" />
-      <entry key="S10" value="32.132698309511426" />
-      <entry key="S30" value="52.73975789502748" />
-      <entry key="S60" value="66.84431400783676" />
-      <entry key="M2" value="93.28101684109097" />
-      <entry key="M5" value="150.3368126967375" />
-      <entry key="M10" value="201.13842453246068" />
-      <entry key="M15" value="231.008175474831" />
-      <entry key="M30" value="283.817652608467" />
-      <entry key="H1" value="337.8958404814496" />
-      <entry key="H2" value="384.58213300590626" />
-      <entry key="H4" value="417.59042620669726" />
-      <entry key="D1" value="452.8477212556954" />
-      <entry key="W1" value="459.8096561490126" />
+      <entry key="MS100" value="1.0000000000641394" />
+      <entry key="MS500" value="1.009479003956586" />
+      <entry key="S2" value="1.4539524000730095" />
+      <entry key="S5" value="2.2448195311825083" />
+      <entry key="S10" value="3.015264313237374" />
+      <entry key="S30" value="4.409464489622756" />
+      <entry key="S60" value="5.558307802371069" />
+      <entry key="M2" value="11.076627256620464" />
+      <entry key="M5" value="52.183140216777836" />
+      <entry key="M10" value="118.05609133227385" />
+      <entry key="M15" value="163.2955451254233" />
+      <entry key="M30" value="242.23871815295635" />
+      <entry key="H1" value="316.77683178577007" />
+      <entry key="H2" value="377.68207577160945" />
+      <entry key="H4" value="419.6525904369167" />
+      <entry key="D1" value="463.8504523649166" />
+      <entry key="W1" value="472.51943572898085" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.728413591646372E-258" />
-      <entry key="S2" value="3.625867404515819E-65" />
-      <entry key="S5" value="1.674038906340977E-26" />
-      <entry key="S10" value="1.295831567212556E-13" />
-      <entry key="S30" value="5.9145740096247745E-5" />
-      <entry key="S60" value="0.011205836081440377" />
-      <entry key="M2" value="0.17722693918987648" />
-      <entry key="M5" value="1.2585462631477222" />
-      <entry key="M10" value="3.295855561616791" />
-      <entry key="M15" value="4.961226378089171" />
-      <entry key="M30" value="8.090978437196192" />
-      <entry key="H1" value="10.800611010499875" />
-      <entry key="H2" value="12.659143555165286" />
-      <entry key="H4" value="13.760377145541948" />
-      <entry key="D1" value="14.782908765534748" />
-      <entry key="W1" value="14.968717766375915" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.7868641422385158E-147" />
+      <entry key="S5" value="1.999113230597514E-59" />
+      <entry key="S10" value="4.478004013775624E-30" />
+      <entry key="S30" value="1.9264989570474452E-10" />
+      <entry key="S60" value="2.0223993600866266E-5" />
+      <entry key="M2" value="0.007529065302464648" />
+      <entry key="M5" value="0.3557572138765675" />
+      <entry key="M10" value="1.7523079697554351" />
+      <entry key="M15" value="3.2559961875526535" />
+      <entry key="M30" value="6.554634288923919" />
+      <entry key="H1" value="9.721248297846664" />
+      <entry key="H2" value="12.009949472140665" />
+      <entry key="H4" value="13.402899619343106" />
+      <entry key="D1" value="14.718197779316815" />
+      <entry key="W1" value="14.959339536330713" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.3611331043319488" />
-      <entry key="MS500" value="2.95098381905302" />
-      <entry key="S2" value="8.269704886907927" />
-      <entry key="S5" value="18.895915591963508" />
-      <entry key="S10" value="32.115823732429384" />
-      <entry key="S30" value="52.73050980842979" />
-      <entry key="S60" value="66.84822668225544" />
-      <entry key="M2" value="93.44427981350253" />
-      <entry key="M5" value="151.56783110671648" />
-      <entry key="M10" value="204.4007042078879" />
-      <entry key="M15" value="235.93436822760262" />
-      <entry key="M30" value="291.8765929893302" />
-      <entry key="H1" value="348.67301269485034" />
-      <entry key="H2" value="397.22673282096616" />
-      <entry key="H4" value="431.3426275002465" />
-      <entry key="D1" value="467.62911726452916" />
-      <entry key="W1" value="474.7781537236165" />
+      <entry key="MS100" value="0.6328782970340866" />
+      <entry key="MS500" value="0.921265384760749" />
+      <entry key="S2" value="1.3671494255516154" />
+      <entry key="S5" value="2.134366842472254" />
+      <entry key="S10" value="2.914344253024103" />
+      <entry key="S30" value="4.337630460226934" />
+      <entry key="S60" value="5.511170527677087" />
+      <entry key="M2" value="11.055878592162022" />
+      <entry key="M5" value="52.51868871467776" />
+      <entry key="M10" value="119.78405498858736" />
+      <entry key="M15" value="166.52415293308326" />
+      <entry key="M30" value="248.76516445788712" />
+      <entry key="H1" value="326.47585779278324" />
+      <entry key="H2" value="389.6776620890941" />
+      <entry key="H4" value="433.04724338797814" />
+      <entry key="D1" value="478.5670967250689" />
+      <entry key="W1" value="487.47854845456203" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -150,7 +138,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/MyGameListProject/gamingList/src/main/java/app/Review",
+    "last_opened_file_path": "D:/MyGameListProject/gamingList/src/test/java/app/Review",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -163,6 +151,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGameListProject\gamingList\src\test\java\app\Review" />
       <recent name="D:\MyGameListProject\gamingList\src\main\java\app\Review" />
       <recent name="D:\MyGameListProject\.github\ISSUE_TEMPLATE" />
       <recent name="D:\MyGameListProject\gamingList\src\test\java" />
@@ -202,7 +191,7 @@
       <workItem from="1784109559645" duration="4681000" />
       <workItem from="1784494088091" duration="1000" />
       <workItem from="1784766774117" duration="10000" />
-      <workItem from="1785152261993" duration="5515000" />
+      <workItem from="1785152261993" duration="5961000" />
     </task>
     <task id="LOCAL-00001" summary="spring project setup">
       <option name="closed" value="true" />
@@ -236,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784314300252</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="#16 initial Review aggregate">
+      <option name="closed" value="true" />
+      <created>1785158040080</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1785158040081</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +244,7 @@
     <MESSAGE value="class/aggregate example" />
     <MESSAGE value="initial pipeline configuration + daily meeting User Story template" />
     <MESSAGE value="#16 pipeline fix test" />
-    <option name="LAST_COMMIT_MESSAGE" value="#16 pipeline fix test" />
+    <MESSAGE value="#16 initial Review aggregate" />
+    <option name="LAST_COMMIT_MESSAGE" value="#16 initial Review aggregate" />
   </component>
 </project>

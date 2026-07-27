@@ -4,4 +4,4 @@ import jakarta.persistence.Embeddable;
 import java.util.UUID;
 
 @Embeddable
-public record GameID(UUID id) {}
+public record GameID(UUID gameId) {}
