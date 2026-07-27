@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#16 refactored timestamp into instant">
+    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#16 pipeline fix test">
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/controller/ReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/CommentId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/MarkdownText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/repository/ReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/service/ReviewService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,21 +23,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="34" />
+    <option name="cachedIndexableFilesCount" value="35" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="GitHub Workflow" />
         <option value="Class" />
-        <option value="package-info" />
+        <option value="GitHub Workflow" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,16 +55,6 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/MarcoGarciaVerbruggen/MyGameListProject.git&quot;,
     &quot;accountId&quot;: &quot;bda76883-5f08-448a-9403-910a25aaf048&quot;
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;MarcoGarciaVerbruggen&quot;,
-    &quot;repository&quot;: &quot;MyGameListProject&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
@@ -63,61 +63,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000413429253383" />
-      <entry key="S2" value="1.0801863233194409" />
-      <entry key="S5" value="1.364451821879009" />
-      <entry key="S10" value="1.6038468804559258" />
-      <entry key="S30" value="1.9999047960408487" />
-      <entry key="S60" value="2.811935924406299" />
-      <entry key="M2" value="4.818427049351683" />
-      <entry key="M5" value="16.275316467921833" />
-      <entry key="M10" value="34.755675005922825" />
-      <entry key="M15" value="46.76054771606689" />
-      <entry key="M30" value="65.91866061942001" />
-      <entry key="H1" value="89.00800889980408" />
-      <entry key="H2" value="120.31692318197442" />
-      <entry key="H4" value="151.04391446157496" />
-      <entry key="D1" value="192.2431328185121" />
-      <entry key="W1" value="201.40080837820935" />
+      <entry key="MS100" value="1.4357994838365242" />
+      <entry key="MS500" value="2.981959283996938" />
+      <entry key="S2" value="8.291254298791614" />
+      <entry key="S5" value="18.915671591733158" />
+      <entry key="S10" value="32.132698309511426" />
+      <entry key="S30" value="52.73975789502748" />
+      <entry key="S60" value="66.84431400783676" />
+      <entry key="M2" value="93.28101684109097" />
+      <entry key="M5" value="150.3368126967375" />
+      <entry key="M10" value="201.13842453246068" />
+      <entry key="M15" value="231.008175474831" />
+      <entry key="M30" value="283.817652608467" />
+      <entry key="H1" value="337.8958404814496" />
+      <entry key="H2" value="384.58213300590626" />
+      <entry key="H4" value="417.59042620669726" />
+      <entry key="D1" value="452.8477212556954" />
+      <entry key="W1" value="459.8096561490126" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="2.753222775743918E-225" />
-      <entry key="S30" value="1.4015667494253577E-75" />
-      <entry key="S60" value="3.7439542613079415E-38" />
-      <entry key="M2" value="1.9491658548572684E-19" />
-      <entry key="M5" value="3.757206527710359E-8" />
-      <entry key="M10" value="2.651350449162588E-4" />
-      <entry key="M15" value="0.005508854576501093" />
-      <entry key="M30" value="0.12279088894564841" />
-      <entry key="H1" value="0.5993148644391769" />
-      <entry key="H2" value="1.3364961912994544" />
-      <entry key="H4" value="2.0007124033341266" />
-      <entry key="D1" value="2.8038074288782027" />
-      <entry key="W1" value="2.9711451268654794" />
+      <entry key="MS500" value="1.728413591646372E-258" />
+      <entry key="S2" value="3.625867404515819E-65" />
+      <entry key="S5" value="1.674038906340977E-26" />
+      <entry key="S10" value="1.295831567212556E-13" />
+      <entry key="S30" value="5.9145740096247745E-5" />
+      <entry key="S60" value="0.011205836081440377" />
+      <entry key="M2" value="0.17722693918987648" />
+      <entry key="M5" value="1.2585462631477222" />
+      <entry key="M10" value="3.295855561616791" />
+      <entry key="M15" value="4.961226378089171" />
+      <entry key="M30" value="8.090978437196192" />
+      <entry key="H1" value="10.800611010499875" />
+      <entry key="H2" value="12.659143555165286" />
+      <entry key="H4" value="13.760377145541948" />
+      <entry key="D1" value="14.782908765534748" />
+      <entry key="W1" value="14.968717766375915" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0029399350535372405" />
-      <entry key="MS500" value="0.3116586358012809" />
-      <entry key="S2" value="0.8009004119547602" />
-      <entry key="S5" value="1.2004813745303828" />
-      <entry key="S10" value="1.5007725334707578" />
-      <entry key="S30" value="1.9583831220177275" />
-      <entry key="S60" value="2.790015285967308" />
-      <entry key="M2" value="4.806994404793585" />
-      <entry key="M5" value="16.269964395289414" />
-      <entry key="M10" value="34.75270661848611" />
-      <entry key="M15" value="46.76366969855092" />
-      <entry key="M30" value="66.03999062439568" />
-      <entry key="H1" value="89.60628099368104" />
-      <entry key="H2" value="121.65262931419298" />
-      <entry key="H4" value="153.04408127605217" />
-      <entry key="D1" value="195.04681123092575" />
-      <entry key="W1" value="204.37193377129176" />
+      <entry key="MS100" value="1.3611331043319488" />
+      <entry key="MS500" value="2.95098381905302" />
+      <entry key="S2" value="8.269704886907927" />
+      <entry key="S5" value="18.895915591963508" />
+      <entry key="S10" value="32.115823732429384" />
+      <entry key="S30" value="52.73050980842979" />
+      <entry key="S60" value="66.84822668225544" />
+      <entry key="M2" value="93.44427981350253" />
+      <entry key="M5" value="151.56783110671648" />
+      <entry key="M10" value="204.4007042078879" />
+      <entry key="M15" value="235.93436822760262" />
+      <entry key="M30" value="291.8765929893302" />
+      <entry key="H1" value="348.67301269485034" />
+      <entry key="H2" value="397.22673282096616" />
+      <entry key="H4" value="431.3426275002465" />
+      <entry key="D1" value="467.62911726452916" />
+      <entry key="W1" value="474.7781537236165" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -132,51 +132,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.GamingListApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.GamingListApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#24 on feat/us002-Review-System&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/MyGameListProject/.github/ISSUE_TEMPLATE&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.GamingListApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "#24 on feat/us002-Review-System",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/MyGameListProject/gamingList/src/main/java/app/Review",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Game.model" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGameListProject\gamingList\src\main\java\app\Review" />
       <recent name="D:\MyGameListProject\.github\ISSUE_TEMPLATE" />
       <recent name="D:\MyGameListProject\gamingList\src\test\java" />
       <recent name="D:\MyGameListProject\gamingList\src\main\java\Game" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="app" />
-      <recent name="app.Game.service" />
-      <recent name="app.Game.repository" />
-      <recent name="app.Game.controller" />
-      <recent name="" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.Review.model" />
     </key>
   </component>
   <component name="RunManager">
@@ -207,6 +200,9 @@
       <workItem from="1783939294582" duration="664000" />
       <workItem from="1783940328084" duration="8428000" />
       <workItem from="1784109559645" duration="4681000" />
+      <workItem from="1784494088091" duration="1000" />
+      <workItem from="1784766774117" duration="10000" />
+      <workItem from="1785152261993" duration="5515000" />
     </task>
     <task id="LOCAL-00001" summary="spring project setup">
       <option name="closed" value="true" />
@@ -232,39 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784113516680</updated>
     </task>
-    <task id="LOCAL-00004" summary="#16 Game Aggregate setup">
+    <task id="LOCAL-00004" summary="#16 pipeline fix test">
       <option name="closed" value="true" />
-      <created>1784298262500</created>
+      <created>1784314300252</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1784298262500</updated>
+      <updated>1784314300252</updated>
     </task>
-    <task id="LOCAL-00005" summary="#16 fixed build compilation error">
-      <option name="closed" value="true" />
-      <created>1784299055552</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1784299055552</updated>
-    </task>
-    <task id="LOCAL-00006" summary="#16 refactored tests similar to main java">
-      <option name="closed" value="true" />
-      <created>1784299264494</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1784299264494</updated>
-    </task>
-    <task id="LOCAL-00007" summary="#16 tests pass locally">
-      <option name="closed" value="true" />
-      <created>1784299733440</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1784299733440</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,10 +246,7 @@
     <MESSAGE value="spring project setup" />
     <MESSAGE value="class/aggregate example" />
     <MESSAGE value="initial pipeline configuration + daily meeting User Story template" />
-    <MESSAGE value="#16 Game Aggregate setup" />
-    <MESSAGE value="#16 fixed build compilation error" />
-    <MESSAGE value="#16 refactored tests similar to main java" />
-    <MESSAGE value="#16 tests pass locally" />
-    <option name="LAST_COMMIT_MESSAGE" value="#16 tests pass locally" />
+    <MESSAGE value="#16 pipeline fix test" />
+    <option name="LAST_COMMIT_MESSAGE" value="#16 pipeline fix test" />
   </component>
 </project>
