@@ -1,6 +1,8 @@
 package app.User.model.domain;
 
 import app.Friendship.model.domain.FriendshipID;
+import app.User.model.enums.AccountStatus;
+import app.User.model.enums.UserRole;
 import app.UserAudit.model.domain.UserAuditID;
 import app.UserPage.model.domain.UserPageID;
 import app.UserSettings.model.domain.UserSettingsID;

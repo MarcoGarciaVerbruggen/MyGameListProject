@@ -1,5 +1,7 @@
 package app.UserSettings.model.domain;
 
+import app.UserSettings.model.enums.UILanguage;
+import app.UserSettings.model.enums.UITheme;
 import lombok.Getter;
 
 public class UISettings {

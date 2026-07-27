@@ -1,4 +1,4 @@
-package app.UserSettings.model.domain;
+package app.UserSettings.model.enums;
 
 public enum UILanguage {
     EN,

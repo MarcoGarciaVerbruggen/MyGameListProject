@@ -14,7 +14,7 @@ public class UserAudit {
     @Getter
     private AuditTimestamp updatedAt;
     @Getter
-    private AuditTimestamp loginAt;
+    private AuditTimestamp lastLoginAt;
     @Getter
     private AuditTimestamp passwordChangeAt;
     @Getter
@@ -27,7 +27,7 @@ public class UserAudit {
             UserID userID,
             AuditTimestamp createdAt,
             AuditTimestamp updatedAt,
-            AuditTimestamp loginAt,
+            AuditTimestamp lastLoginAt,
             AuditTimestamp passwordChangeAt,
             boolean emailVerified,
             AuditTimestamp emailChangedAt
@@ -36,7 +36,7 @@ public class UserAudit {
         this.userID = userID;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
-        this.loginAt = loginAt;
+        this.lastLoginAt = lastLoginAt;
         this.passwordChangeAt = passwordChangeAt;
         this. emailVerified = emailVerified;
         this.emailChangeAt = emailChangedAt;
