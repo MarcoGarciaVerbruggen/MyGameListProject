@@ -1,4 +1,4 @@
-package app.Game.model;
+package app.Game.model.enums;
 
 public enum ProRole {
     DIRECTOR,

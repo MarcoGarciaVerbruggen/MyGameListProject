@@ -1,6 +1,6 @@
 package app.Review.model;
 
-import app.Game.model.GameID;
+import app.Game.model.domain.GameID;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

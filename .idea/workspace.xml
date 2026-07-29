@@ -4,21 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#16 simple id fix" />
+    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#16 simple id fix 2">
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/CompanyID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/CoverUrl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Description.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Developer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/ExternalID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/GameID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Link.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/PlatformGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/PlatformID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/PriceData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/PriceHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/ProID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Region.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Staff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/domain/Tags.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/persistence/JPAGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/CompanyID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/CoverUrl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Currency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Description.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Developer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/ExternalID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/GameID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Link.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Name.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PlatformGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PlatformID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PriceData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/PriceHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/ProID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/ProRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/enums/ProRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Publisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Region.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Staff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/model/Tags.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/repository/GameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/repository/GameRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Game/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/Review.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="35" />
+    <option name="cachedIndexableFilesCount" value="55" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="GitHub Workflow" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,6 +83,17 @@
     &quot;assignee&quot;: &quot;JCaldas-dev&quot;
   }
 }</component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
+    {
+      "id": {
+        "id": "PR_kwDOTBrnts7zBXo-",
+        "number": 24
+      },
+      "lastSeen": 1785315313946
+    }
+  ]
+}]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="bda76883-5f08-448a-9403-910a25aaf048" />
   </component>
@@ -51,62 +109,65 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000623854" />
-      <entry key="MS500" value="1.0091104517348515" />
-      <entry key="S2" value="1.3685007351381508" />
-      <entry key="S5" value="2.105903899523889" />
-      <entry key="S10" value="3.1284244912679298" />
-      <entry key="S30" value="5.043566741575324" />
-      <entry key="S60" value="6.024771112190908" />
-      <entry key="M2" value="8.070179867739418" />
-      <entry key="M5" value="26.572864539800307" />
-      <entry key="M10" value="77.95823088503968" />
-      <entry key="M15" value="123.72196663710058" />
-      <entry key="M30" value="214.03212762502488" />
-      <entry key="H1" value="303.2959790059455" />
-      <entry key="H2" value="376.5218653724996" />
-      <entry key="H4" value="426.8967676568946" />
-      <entry key="D1" value="479.8518015549467" />
-      <entry key="W1" value="490.22814663281304" />
+      <entry key="MS100" value="1.4963593145005933" />
+      <entry key="MS500" value="3.222323109448344" />
+      <entry key="S2" value="11.520068791350417" />
+      <entry key="S5" value="22.307513756148985" />
+      <entry key="S10" value="29.686478791158773" />
+      <entry key="S30" value="36.662132205907845" />
+      <entry key="S60" value="38.853543375436516" />
+      <entry key="M2" value="42.56350425784131" />
+      <entry key="M5" value="59.90371240581398" />
+      <entry key="M10" value="78.55757433949728" />
+      <entry key="M15" value="89.07551272269947" />
+      <entry key="M30" value="116.88631624848529" />
+      <entry key="H1" value="215.76949718857193" />
+      <entry key="H2" value="430.3724346855488" />
+      <entry key="H4" value="687.1772247992513" />
+      <entry key="D1" value="1078.6112931241619" />
+      <entry key="W1" value="1171.5671944215255" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="4.793825981869487E-227" />
-      <entry key="S5" value="2.966700370783952E-91" />
-      <entry key="S10" value="5.4550988505575654E-46" />
-      <entry key="S30" value="9.550105303182859E-16" />
-      <entry key="S60" value="4.502840983206117E-8" />
-      <entry key="M2" value="3.5526376126955844E-4" />
-      <entry key="M5" value="0.104876371547649" />
-      <entry key="M10" value="0.9514202820068297" />
-      <entry key="M15" value="2.166998116145109" />
-      <entry key="M30" value="5.347315249789653" />
-      <entry key="H1" value="8.780428231041244" />
-      <entry key="H2" value="11.414003753111956" />
-      <entry key="H4" value="13.06613618280848" />
-      <entry key="D1" value="14.655907111584275" />
-      <entry key="W1" value="14.950278626440133" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="5.420361244801702E-123" />
+      <entry key="S60" value="7.362310265671855E-62" />
+      <entry key="M2" value="2.7133577504644155E-31" />
+      <entry key="M5" value="5.938662663895811E-13" />
+      <entry key="M10" value="8.284461745947582E-7" />
+      <entry key="M15" value="1.1763010418481405E-4" />
+      <entry key="M30" value="0.030221169740069068" />
+      <entry key="H1" value="0.6466992924878385" />
+      <entry key="H2" value="3.168583349382085" />
+      <entry key="H4" value="7.095800483090568" />
+      <entry key="D1" value="13.965956455742948" />
+      <entry key="W1" value="15.692050454370731" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.47631899906990793" />
-      <entry key="MS500" value="0.8707762147363938" />
-      <entry key="S2" value="1.2895636932873284" />
-      <entry key="S5" value="1.9661396110578508" />
-      <entry key="S10" value="2.976576824811298" />
-      <entry key="S30" value="4.940418971557013" />
-      <entry key="S60" value="5.960754177277302" />
-      <entry key="M2" value="8.033190448225493" />
-      <entry key="M5" value="26.65602593800541" />
-      <entry key="M10" value="78.88824572525468" />
-      <entry key="M15" value="125.86519892917147" />
-      <entry key="M30" value="219.35363501963036" />
-      <entry key="H1" value="312.0549181881475" />
-      <entry key="H2" value="387.9215070067096" />
-      <entry key="H4" value="439.9545077853496" />
-      <entry key="D1" value="494.50610228375353" />
-      <entry key="W1" value="505.1781900778449" />
+      <entry key="MS100" value="1.4189306527625054" />
+      <entry key="MS500" value="3.189427312346951" />
+      <entry key="S2" value="11.490358805624378" />
+      <entry key="S5" value="22.284261287858396" />
+      <entry key="S10" value="29.670939990875304" />
+      <entry key="S30" value="36.6557164384698" />
+      <entry key="S60" value="38.850140911418144" />
+      <entry key="M2" value="42.56163483660618" />
+      <entry key="M5" value="59.90262000275326" />
+      <entry key="M10" value="78.5564207594046" />
+      <entry key="M15" value="89.07410045221381" />
+      <entry key="M30" value="116.91428573940411" />
+      <entry key="H1" value="216.41251901755584" />
+      <entry key="H2" value="433.53544270180726" />
+      <entry key="H4" value="694.2674691184067" />
+      <entry key="D1" value="1092.5755168674225" />
+      <entry key="W1" value="1187.2589681858926" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -138,12 +199,13 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/MyGameListProject/gamingList/src/test/java/app/Review",
+    "last_opened_file_path": "D:/MyGameListProject/gamingList/src/main/java/app/Game/model/domain",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
@@ -151,11 +213,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGameListProject\gamingList\src\main\java\app\Game\model\domain" />
       <recent name="D:\MyGameListProject\gamingList\src\test\java\app\Review" />
       <recent name="D:\MyGameListProject\gamingList\src\main\java\app\Review" />
       <recent name="D:\MyGameListProject\.github\ISSUE_TEMPLATE" />
       <recent name="D:\MyGameListProject\gamingList\src\test\java" />
-      <recent name="D:\MyGameListProject\gamingList\src\main\java\Game" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="app.Review.model" />
@@ -191,7 +253,11 @@
       <workItem from="1784109559645" duration="4681000" />
       <workItem from="1784494088091" duration="1000" />
       <workItem from="1784766774117" duration="10000" />
-      <workItem from="1785152261993" duration="6438000" />
+      <workItem from="1785152261993" duration="8758000" />
+      <workItem from="1785161974509" duration="259000" />
+      <workItem from="1785171383879" duration="1063000" />
+      <workItem from="1785184881895" duration="1000" />
+      <workItem from="1785306868978" duration="12207000" />
     </task>
     <task id="LOCAL-00001" summary="spring project setup">
       <option name="closed" value="true" />
@@ -241,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785158382238</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="#16 simple id fix 2">
+      <option name="closed" value="true" />
+      <created>1785158941592</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785158941592</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +328,17 @@
     <MESSAGE value="#16 pipeline fix test" />
     <MESSAGE value="#16 initial Review aggregate" />
     <MESSAGE value="#16 simple id fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="#16 simple id fix" />
+    <MESSAGE value="#16 simple id fix 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="#16 simple id fix 2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.type.descriptor.java.spi.JdbcTypeRecommendationException" package="org.hibernate.type.descriptor.java.spi" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

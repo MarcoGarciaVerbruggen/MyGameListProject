@@ -1,8 +1,9 @@
 // GameController.java
 package app.Game.controller;
 
-import app.Game.model.Game;
-import app.Game.model.GameID;
+import app.Game.model.domain.Game;
+import app.Game.model.domain.GameID;
+import app.Game.model.persistence.JPAGame;
 import app.Game.service.GameService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,22 +20,22 @@ public class GameController {
     private final GameService gameService;
 
     @GetMapping
-    public List<Game> getAll() {
+    public List<JPAGame> getAll() {
         return gameService.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Game> getById(@PathVariable UUID id) {
+    public ResponseEntity<JPAGame> getById(@PathVariable UUID id) {
         return ResponseEntity.ok(gameService.findById(new GameID(id)));
     }
 
     @PostMapping
-    public ResponseEntity<Game> create(@RequestBody Game game) {
+    public ResponseEntity<JPAGame> create(@RequestBody Game game) {
         return ResponseEntity.ok(gameService.create(game));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Game> update(@PathVariable UUID id, @RequestBody Game game) {
+    public ResponseEntity<JPAGame> update(@PathVariable UUID id, @RequestBody Game game) {
         return ResponseEntity.ok(gameService.update(new GameID(id), game));
     }
 
