@@ -1,8 +1,8 @@
 // ReviewService.java
 package app.Review.service;
 
-import app.Review.model.Review;
-import app.Review.model.ReviewID;
+import app.Review.model.domain.ReviewID;
+import app.Review.model.persistence.JPAReview;
 import app.Review.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,21 +15,21 @@ public class ReviewService {
 
     private final ReviewRepository reviewRepository;
 
-    public List<Review> findAll() {
+    public List<JPAReview> findAll() {
         return reviewRepository.findAll();
     }
 
-    public Review findById(ReviewID id) {
+    public JPAReview findById(ReviewID id) {
         return reviewRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("app.Review not found: " + id));
     }
 
-    public Review create(Review review) {
+    public JPAReview create(JPAReview review) {
         return reviewRepository.save(review);
     }
 
-    public Review update(ReviewID id, Review updatedReview) {
-        Review existing = findById(id);
+    public JPAReview update(ReviewID id, JPAReview updatedReview) {
+        JPAReview existing = findById(id);
 
         return reviewRepository.save(existing);
     }

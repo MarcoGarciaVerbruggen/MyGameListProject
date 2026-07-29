@@ -1,29 +1,19 @@
-package app.Review.model;
+package app.Review.model.domain;
 
 import app.Game.model.domain.GameID;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import app.Review.model.enums.ReviewStatus;
 
 import java.time.Instant;
 import java.util.List;
 
-@Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Review {
 
-    @EmbeddedId
     private ReviewID reviewID;
 
     //private UserId userID;
 
-    @Embedded
     private GameID gameID;
 
-    @Embedded
     private ReviewBody body;
 
     private Instant reviewPosted;
@@ -36,14 +26,12 @@ public class Review {
 
     //private TrackerEntry masterList;
 
-    //@OneToMany
     //private List<TrackerEntry> otherScores;
 
     private int averageScore;
 
     private ReviewStatus status;
 
-    @OneToMany(mappedBy = "review", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments;
 
     private int upvotes;

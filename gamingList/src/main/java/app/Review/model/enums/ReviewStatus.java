@@ -1,4 +1,4 @@
-package app.Review.model;
+package app.Review.model.enums;
 
 public enum ReviewStatus {
     DRAFT,

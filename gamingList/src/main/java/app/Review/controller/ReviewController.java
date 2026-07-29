@@ -1,8 +1,8 @@
 // ReviewController.java
 package app.Review.controller;
 
-import app.Review.model.Review;
-import app.Review.model.ReviewID;
+import app.Review.model.domain.ReviewID;
+import app.Review.model.persistence.JPAReview;
 import app.Review.service.ReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,22 +19,22 @@ public class ReviewController {
     private final ReviewService reviewService;
 
     @GetMapping
-    public List<Review> getAll() {
+    public List<JPAReview> getAll() {
         return reviewService.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Review> getById(@PathVariable UUID id) {
+    public ResponseEntity<JPAReview> getById(@PathVariable UUID id) {
         return ResponseEntity.ok(reviewService.findById(new ReviewID(id)));
     }
 
     @PostMapping
-    public ResponseEntity<Review> create(@RequestBody Review review) {
+    public ResponseEntity<JPAReview> create(@RequestBody JPAReview review) {
         return ResponseEntity.ok(reviewService.create(review));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Review> update(@PathVariable UUID id, @RequestBody Review review) {
+    public ResponseEntity<JPAReview> update(@PathVariable UUID id, @RequestBody JPAReview review) {
         return ResponseEntity.ok(reviewService.update(new ReviewID(id), review));
     }
 
