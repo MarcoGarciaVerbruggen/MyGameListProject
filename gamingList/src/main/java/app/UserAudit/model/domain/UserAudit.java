@@ -1,7 +1,7 @@
 package app.UserAudit.model.domain;
 
 import app.User.model.domain.UserID;
-import app.Utils.model.domain.AuditTimestamp;
+import app.utils.model.domain.AuditTimestamp;
 import lombok.Getter;
 
 public class UserAudit {

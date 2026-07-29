@@ -1,4 +1,4 @@
-package app.Utils.model.domain;
+package app.utils.model.domain;
 
 import lombok.Getter;
 
