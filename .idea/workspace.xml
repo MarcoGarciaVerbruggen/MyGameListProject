@@ -4,17 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="initial pipeline configuration + daily meeting User Story template" />
+    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#16 major persistence refactor for Game aggregate">
+      <change afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/persistence/JPAReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/domain/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/CommentId.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/domain/CommentId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/MarkdownText.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/domain/MarkdownText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/domain/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/domain/ReviewBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewID.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/domain/ReviewID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/ReviewStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/model/enums/ReviewStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/repository/ReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/src/main/java/app/Review/service/ReviewService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="58" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="GitHub Workflow" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,6 +49,17 @@
     &quot;assignee&quot;: &quot;JCaldas-dev&quot;
   }
 }</component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
+    {
+      "id": {
+        "id": "PR_kwDOTBrnts7zBXo-",
+        "number": 24
+      },
+      "lastSeen": 1785315313946
+    }
+  ]
+}]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="bda76883-5f08-448a-9403-910a25aaf048" />
   </component>
@@ -41,64 +69,71 @@
     &quot;accountId&quot;: &quot;bda76883-5f08-448a-9403-910a25aaf048&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0038557694497394" />
-      <entry key="MS500" value="1.4090666780188572" />
-      <entry key="S2" value="2.3263482961899014" />
-      <entry key="S5" value="3.5918801898315498" />
-      <entry key="S10" value="6.181230786941013" />
-      <entry key="S30" value="12.19026167171308" />
-      <entry key="S60" value="15.432668048575051" />
-      <entry key="M2" value="17.856542438227578" />
-      <entry key="M5" value="20.091193755661095" />
-      <entry key="M10" value="23.341386117285037" />
-      <entry key="M15" value="28.218464226338977" />
-      <entry key="M30" value="41.83825321380654" />
-      <entry key="H1" value="56.94392271948248" />
-      <entry key="H2" value="69.18781041713642" />
-      <entry key="H4" value="77.45776661415556" />
-      <entry key="D1" value="86.04369917410042" />
-      <entry key="W1" value="87.71496000725737" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000000249731" />
+      <entry key="S5" value="1.0000635748964029" />
+      <entry key="S10" value="1.0100731641254297" />
+      <entry key="S30" value="1.3427179973253853" />
+      <entry key="S60" value="1.9146070978745344" />
+      <entry key="M2" value="2.5939641058963363" />
+      <entry key="M5" value="3.645036194900682" />
+      <entry key="M10" value="8.96785043553105" />
+      <entry key="M15" value="19.22577378124417" />
+      <entry key="M30" value="57.700014391388876" />
+      <entry key="H1" value="150.92308823527077" />
+      <entry key="H2" value="357.67852464417376" />
+      <entry key="H4" value="637.8012703634623" />
+      <entry key="D1" value="1115.1063771468362" />
+      <entry key="W1" value="1235.4765677701496" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="S2" value="6.455477091994089E-250" />
+      <entry key="S5" value="2.1084889907172191E-100" />
+      <entry key="S10" value="1.4520637006403056E-50" />
+      <entry key="S30" value="2.4396557903044324E-17" />
+      <entry key="S60" value="4.939310042535062E-9" />
+      <entry key="M2" value="7.056667960367945E-5" />
+      <entry key="M5" value="0.02726876167425476" />
+      <entry key="M10" value="0.29493622563639466" />
+      <entry key="M15" value="0.7217187360800289" />
+      <entry key="M30" value="1.8655874211043473" />
+      <entry key="H1" value="3.3526337132796185" />
+      <entry key="H2" value="6.117288863852223" />
+      <entry key="H4" value="10.358399151481382" />
+      <entry key="D1" value="18.45787776575231" />
+      <entry key="W1" value="20.611374822005295" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.962962842615389" />
-      <entry key="MS500" value="1.397505202300857" />
-      <entry key="S2" value="2.321631388629589" />
-      <entry key="S5" value="3.587554870114925" />
-      <entry key="S10" value="6.175907361542193" />
-      <entry key="S30" value="12.18616946185012" />
-      <entry key="S60" value="15.430040620350303" />
-      <entry key="M2" value="17.85501118056661" />
-      <entry key="M5" value="20.09049722266948" />
-      <entry key="M10" value="23.340963522751164" />
-      <entry key="M15" value="28.218095510246837" />
-      <entry key="M30" value="41.83791564188694" />
-      <entry key="H1" value="56.94359362079357" />
-      <entry key="H2" value="69.18752114683613" />
-      <entry key="H4" value="77.45756030987718" />
-      <entry key="D1" value="86.04365128983177" />
-      <entry key="W1" value="87.7149527456012" />
+      <entry key="MS100" value="1.421793928794501E-4" />
+      <entry key="MS500" value="0.17004635655074438" />
+      <entry key="S2" value="0.6421579045070998" />
+      <entry key="S5" value="0.8376868684900962" />
+      <entry key="S10" value="0.924014834428928" />
+      <entry key="S30" value="1.2986720866600947" />
+      <entry key="S60" value="1.8799161336286168" />
+      <entry key="M2" value="2.5691941940369403" />
+      <entry key="M5" value="3.658736226920423" />
+      <entry key="M10" value="9.252907464640995" />
+      <entry key="M15" value="19.938324269600866" />
+      <entry key="M30" value="59.557541075204334" />
+      <entry key="H1" value="154.268715105346" />
+      <entry key="H2" value="363.78879362344486" />
+      <entry key="H4" value="648.1533100304476" />
+      <entry key="D1" value="1133.5622655338973" />
+      <entry key="W1" value="1256.0876226257328" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -119,22 +154,25 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.GamingListApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "#24 on feat/us002-Review-System",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/MyGameListProject/.github/ISSUE_TEMPLATE",
+    "last_opened_file_path": "D:/MyGameListProject/gamingList/src/main/java/app/Game/model/domain",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
@@ -142,16 +180,22 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGameListProject\gamingList\src\main\java\app\Game\model\domain" />
+      <recent name="D:\MyGameListProject\gamingList\src\test\java\app\Review" />
+      <recent name="D:\MyGameListProject\gamingList\src\main\java\app\Review" />
       <recent name="D:\MyGameListProject\.github\ISSUE_TEMPLATE" />
       <recent name="D:\MyGameListProject\gamingList\src\test\java" />
-      <recent name="D:\MyGameListProject\gamingList\src\main\java\Game" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.Review.model.persistance" />
+      <recent name="app.Review.model" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="GamingListApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="gamingList" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.gaminglist.GamingListApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.GamingListApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,6 +219,13 @@
       <workItem from="1783939294582" duration="664000" />
       <workItem from="1783940328084" duration="8428000" />
       <workItem from="1784109559645" duration="4681000" />
+      <workItem from="1784494088091" duration="1000" />
+      <workItem from="1784766774117" duration="10000" />
+      <workItem from="1785152261993" duration="8758000" />
+      <workItem from="1785161974509" duration="259000" />
+      <workItem from="1785171383879" duration="1063000" />
+      <workItem from="1785184881895" duration="1000" />
+      <workItem from="1785306868978" duration="15846000" />
     </task>
     <task id="LOCAL-00001" summary="spring project setup">
       <option name="closed" value="true" />
@@ -200,7 +251,47 @@
       <option name="project" value="LOCAL" />
       <updated>1784113516680</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#16 pipeline fix test">
+      <option name="closed" value="true" />
+      <created>1784314300252</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784314300252</updated>
+    </task>
+    <task id="LOCAL-00005" summary="#16 initial Review aggregate">
+      <option name="closed" value="true" />
+      <created>1785158040080</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1785158040081</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#16 simple id fix">
+      <option name="closed" value="true" />
+      <created>1785158382238</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785158382238</updated>
+    </task>
+    <task id="LOCAL-00007" summary="#16 simple id fix 2">
+      <option name="closed" value="true" />
+      <created>1785158941592</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785158941592</updated>
+    </task>
+    <task id="LOCAL-00008" summary="#16 major persistence refactor for Game aggregate">
+      <option name="closed" value="true" />
+      <created>1785322508171</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785322508171</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +301,21 @@
     <MESSAGE value="spring project setup" />
     <MESSAGE value="class/aggregate example" />
     <MESSAGE value="initial pipeline configuration + daily meeting User Story template" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial pipeline configuration + daily meeting User Story template" />
+    <MESSAGE value="#16 pipeline fix test" />
+    <MESSAGE value="#16 initial Review aggregate" />
+    <MESSAGE value="#16 simple id fix" />
+    <MESSAGE value="#16 simple id fix 2" />
+    <MESSAGE value="#16 major persistence refactor for Game aggregate" />
+    <option name="LAST_COMMIT_MESSAGE" value="#16 major persistence refactor for Game aggregate" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.type.descriptor.java.spi.JdbcTypeRecommendationException" package="org.hibernate.type.descriptor.java.spi" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
