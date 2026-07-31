@@ -1,0 +1,33 @@
+.option-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #1e1f22;
+  color: #f2f3f5;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #949ba4;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.back-arrow:hover {
+  color: #f2f3f5;
+}
+
+.option-label {
+  margin: 0;
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}

@@ -1,0 +1,147 @@
+.menu-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  padding: 24px;
+  overflow: hidden;
+  background: #1e1f22;
+  color: #f2f3f5;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.menu-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 900px 600px at 82% 8%, rgba(88, 101, 242, 0.28), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 12% 92%, rgba(88, 101, 242, 0.12), transparent 60%),
+    linear-gradient(180deg, #232428 0%, #1e1f22 55%, #18191c 100%);
+  pointer-events: none;
+}
+
+.menu-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.menu-eyebrow {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #949ba4;
+}
+
+.menu-welcome {
+  margin: 0;
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.menu-subtitle {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #b5bac1;
+}
+
+.menu-grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
+  background: #2b2d31;
+  border: 1px solid #35373c;
+  text-decoration: none;
+  color: #f2f3f5;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  border-color: #5865f2;
+  background: #313338;
+}
+
+.menu-card:focus-visible {
+  outline: 2px solid #5865f2;
+  outline-offset: 3px;
+}
+
+.menu-card-letter {
+  font-size: 30px;
+  font-weight: 700;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(88, 101, 242, 0.16);
+  color: #5865f2;
+}
+
+.menu-card-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #dbdee1;
+}
+
+.feedback-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #2b2d31;
+  border: 1px solid #35373c;
+  color: #dbdee1;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.feedback-widget:hover {
+  border-color: #5865f2;
+  background: #313338;
+}
+
+.feedback-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #23a55a;
+}
+
+@media (max-width: 480px) {
+  .menu-card {
+    width: 45%;
+    height: 130px;
+  }
+}
