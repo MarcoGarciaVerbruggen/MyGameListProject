@@ -1,0 +1,260 @@
+.gl-page {
+  min-height: 100vh;
+  background: #1e1f22;
+  color: #f2f3f5;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  padding: 24px 32px 64px;
+  box-sizing: border-box;
+}
+
+.gl-back {
+  color: #949ba4;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gl-back:hover {
+  color: #f2f3f5;
+}
+
+.gl-header {
+  text-align: center;
+  margin: 24px 0 40px;
+}
+
+.gl-header h1 {
+  margin: 0 0 8px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.gl-header p {
+  margin: 0;
+  color: #b5bac1;
+}
+
+/* ========================= */
+/* LIST */
+/* ========================= */
+
+.gl-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gl-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #2b2d31;
+  border: 1px solid #35373c;
+  border-radius: 14px;
+  padding: 16px;
+
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.gl-row:hover {
+  border-color: #5865f2;
+  transform: translateY(-2px);
+}
+
+.gl-row-main {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 55px 140px 1fr 90px;
+  gap: 18px;
+  align-items: center;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.gl-rank {
+  font-size: 22px;
+  font-weight: 700;
+  color: #949ba4;
+  text-align: center;
+}
+
+/* ========================= */
+/* COVER */
+/* ========================= */
+
+.gl-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  background: linear-gradient(160deg, #5865f2, #2b2d31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.gl-cover-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #16171a;
+}
+
+/* ========================= */
+/* GAME INFO */
+/* ========================= */
+
+.gl-info h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.gl-platform {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #949ba4;
+}
+
+/* ========================= */
+/* COMMUNITY SCORE */
+/* ========================= */
+
+.gl-community {
+  text-align: center;
+}
+
+.gl-community-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #949ba4;
+}
+
+.gl-community-score {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 10px;
+
+  background: #2e51a2;
+
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.gl-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+  min-width: 180px;
+}
+
+.gl-tracker select {
+  background: #1e1f22;
+  color: #f2f3f5;
+
+  border: 1px solid #35373c;
+  border-radius: 8px;
+
+  padding: 8px 10px;
+
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.gl-tracker select:focus {
+  outline: none;
+  border-color: #5865f2;
+}
+
+.gl-detail {
+  max-width: 520px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.gl-detail-banner {
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 460 / 215;
+  border-radius: 14px;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  display: block;
+  background: #16171a;
+}
+
+.gl-detail-cover {
+  width: 160px;
+  height: 210px;
+  margin: 0 auto 20px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #5865f2, #2b2d31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.gl-detail h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.gl-detail-meta {
+  margin: 0 0 8px;
+  color: #949ba4;
+  font-size: 14px;
+}
+
+.gl-detail-rating {
+  margin: 0 0 20px;
+  color: #f0b132;
+  font-weight: 700;
+}
+
+.gl-detail-desc {
+  margin: 0;
+  color: #dbdee1;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .gl-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .gl-row-main {
+    grid-template-columns: 45px 110px 1fr;
+  }
+
+  .gl-community {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .gl-tracker {
+    margin-left: 0;
+    min-width: auto;
+  }
+}

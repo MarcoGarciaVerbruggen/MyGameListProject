@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="initial pipeline configuration + daily meeting User Story template">
+    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#27 initial mockup commit">
+      <change afterPath="$PROJECT_DIR$/docs/mockup/resources/gameData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/GameDetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/PersonalTracker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionA/GameListA.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionA/PersonalTrackerA.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionB/GameDetailB.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionB/GameListB.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionC/GameDetailC.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionC/GameListC.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamingList/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gamingList/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mockup/src/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/Menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionA/OptionA.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionA/GameDetailA.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +31,17 @@
       <list>
         <option value="Class" />
         <option value="GitHub Workflow" />
+        <option value="JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="JCaldas" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="dev" />
@@ -57,57 +74,57 @@
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
       <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000027144159227" />
-      <entry key="S60" value="1.0047508595821233" />
-      <entry key="M2" value="1.3777284486511658" />
-      <entry key="M5" value="8.002824763721382" />
-      <entry key="M10" value="23.600210517807255" />
-      <entry key="M15" value="40.734463355696384" />
-      <entry key="M30" value="91.35140273720526" />
-      <entry key="H1" value="159.1689557764396" />
-      <entry key="H2" value="220.80725868332107" />
-      <entry key="H4" value="264.12402591168217" />
-      <entry key="D1" value="309.6157008359777" />
-      <entry key="W1" value="318.4870173645983" />
+      <entry key="S10" value="1.0000000000000526" />
+      <entry key="S30" value="1.0000433588154933" />
+      <entry key="S60" value="1.0114496328127731" />
+      <entry key="M2" value="1.240740853906863" />
+      <entry key="M5" value="2.6293310351486934" />
+      <entry key="M10" value="4.121092704077453" />
+      <entry key="M15" value="4.921007462051126" />
+      <entry key="M30" value="6.991003479810805" />
+      <entry key="H1" value="20.058215797162546" />
+      <entry key="H2" value="78.28199404553489" />
+      <entry key="H4" value="187.16985516343675" />
+      <entry key="D1" value="412.6163155228296" />
+      <entry key="W1" value="474.7178309171412" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="7.544497215570683E-8" />
-      <entry key="MS500" value="0.03762929316348175" />
-      <entry key="S2" value="0.4404346870634896" />
-      <entry key="S5" value="0.7203650037023519" />
-      <entry key="S10" value="0.848743190666265" />
-      <entry key="S30" value="0.9468011305428874" />
-      <entry key="S60" value="0.9730560245128661" />
-      <entry key="M2" value="0.9913599574829481" />
-      <entry key="M5" value="1.1635330790977365" />
-      <entry key="M10" value="1.6302301164350868" />
-      <entry key="M15" value="2.0503105772182546" />
-      <entry key="M30" value="2.9025278255369398" />
-      <entry key="H1" value="3.694522099811882" />
-      <entry key="H2" value="4.261775293792839" />
-      <entry key="H4" value="4.60597354770651" />
-      <entry key="D1" value="4.930514190503012" />
-      <entry key="W1" value="4.98997499479593" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="1.8782086681191468E-129" />
+      <entry key="S60" value="6.3358016818834225E-65" />
+      <entry key="M2" value="1.2940118787829549E-32" />
+      <entry key="M5" value="3.851018563348037E-13" />
+      <entry key="M10" value="1.3215748636963244E-6" />
+      <entry key="M15" value="2.040833659540996E-4" />
+      <entry key="M30" value="0.033479103084738" />
+      <entry key="H1" value="0.4895694239098636" />
+      <entry key="H2" value="2.0825111612453346" />
+      <entry key="H4" value="4.485153344075906" />
+      <entry key="D1" value="8.726982807653634" />
+      <entry key="W1" value="9.80673939246105" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.24316373696320695" />
-      <entry key="MS500" value="0.7638624153080105" />
-      <entry key="S2" value="1.2494983516311895" />
-      <entry key="S5" value="1.6042925440550784" />
-      <entry key="S10" value="1.7810547675749806" />
-      <entry key="S30" value="1.9217172108906346" />
-      <entry key="S60" value="1.9649177149615258" />
-      <entry key="M2" value="2.362210832763772" />
-      <entry key="M5" value="9.15932809651092" />
-      <entry key="M10" value="25.221634275379284" />
-      <entry key="M15" value="42.776161074614706" />
-      <entry key="M30" value="94.24716178509706" />
-      <entry key="H1" value="162.85897222128537" />
-      <entry key="H2" value="225.06631556386566" />
-      <entry key="H4" value="268.7284650509092" />
-      <entry key="D1" value="314.54592497910795" />
-      <entry key="W1" value="323.4769498905963" />
+      <entry key="MS100" value="0.6155722066724582" />
+      <entry key="MS500" value="0.9075191553171609" />
+      <entry key="S2" value="0.9760317607762247" />
+      <entry key="S5" value="0.9903428719330246" />
+      <entry key="S10" value="0.9951597218201355" />
+      <entry key="S30" value="0.9984272897122947" />
+      <entry key="S60" value="1.0106370027594647" />
+      <entry key="M2" value="1.2402919661287843" />
+      <entry key="M5" value="2.629049107728945" />
+      <entry key="M10" value="4.120898100204595" />
+      <entry key="M15" value="4.921058798215247" />
+      <entry key="M30" value="7.024305996706068" />
+      <entry key="H1" value="20.547201268858934" />
+      <entry key="H2" value="80.36328837276704" />
+      <entry key="H4" value="191.65363525288802" />
+      <entry key="D1" value="421.3428231312215" />
+      <entry key="W1" value="484.52449297018035" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -141,7 +158,8 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/MyGameListProject/.github/ISSUE_TEMPLATE",
+    "last_opened_file_path": "D:/MyGameListProject/docs/mockup/src/optionC",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -149,16 +167,21 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
     "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGameListProject\docs\mockup\src\optionC" />
+      <recent name="D:\MyGameListProject\docs\mockup\src\optionB" />
+      <recent name="D:\MyGameListProject\docs\mockup\src\optionA" />
       <recent name="D:\MyGameListProject\.github\ISSUE_TEMPLATE" />
       <recent name="D:\MyGameListProject\gamingList\src\test\java" />
-      <recent name="D:\MyGameListProject\gamingList\src\main\java\Game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyGameListProject\docs\mockup" />
+      <recent name="D:\MyGameListProject\docs\mockup\src\resources" />
       <recent name="D:\MyGameListProject\docs\mockup\src\optionC" />
       <recent name="D:\MyGameListProject\docs\mockup\src\optionB" />
       <recent name="D:\MyGameListProject\docs\mockup\src\optionA" />
@@ -192,7 +215,10 @@
       <workItem from="1783939294582" duration="664000" />
       <workItem from="1783940328084" duration="8428000" />
       <workItem from="1784109559645" duration="4681000" />
-      <workItem from="1785504522674" duration="3144000" />
+      <workItem from="1785504522674" duration="3665000" />
+      <workItem from="1785750742820" duration="10470000" />
+      <workItem from="1785778972883" duration="3087000" />
+      <workItem from="1785925118849" duration="9973000" />
     </task>
     <task id="LOCAL-00001" summary="spring project setup">
       <option name="closed" value="true" />
@@ -218,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784113516680</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#27 initial mockup commit">
+      <option name="closed" value="true" />
+      <created>1785508010729</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1785508010729</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +262,7 @@
     <MESSAGE value="spring project setup" />
     <MESSAGE value="class/aggregate example" />
     <MESSAGE value="initial pipeline configuration + daily meeting User Story template" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial pipeline configuration + daily meeting User Story template" />
+    <MESSAGE value="#27 initial mockup commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="#27 initial mockup commit" />
   </component>
 </project>

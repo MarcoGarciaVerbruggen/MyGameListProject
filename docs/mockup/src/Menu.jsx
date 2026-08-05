@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./Menu.css";
-import OptionA from "./optionA/OptionA.jsx";
+import GameListA from "./optionA/GameListA.jsx";
+import GameDetailA from "./optionA/GameDetailA.jsx";
+import PersonalTrackerA from "./optionA/PersonalTrackerA.jsx";
 import OptionB from "./optionB/OptionB.jsx";
 import OptionC from "./optionC/OptionC.jsx";
 
@@ -10,7 +12,6 @@ const options = [
   { key: "c", label: "Option C", href: "/OptionC" },
 ];
 
-// Replace this with your real feedback doc/form link
 const FEEDBACK_URL = "https://docs.google.com/document/d/your-doc-id/edit";
 
 function MenuHome() {
@@ -51,7 +52,10 @@ export default function Menu() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MenuHome />} />
-        <Route path="/OptionA" element={<OptionA />} />
+
+        <Route path="/OptionA" element={<GameListA />} />
+        <Route path="/OptionA/game/:id" element={<GameDetailA />} />
+        <Route path="/OptionA/tracker" element={<PersonalTrackerA />} />
         <Route path="/OptionB" element={<OptionB />} />
         <Route path="/OptionC" element={<OptionC />} />
       </Routes>
