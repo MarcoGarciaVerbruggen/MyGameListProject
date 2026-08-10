@@ -139,3 +139,324 @@
 .pt-empty p {
     color: #949ba4;
 }
+
+/* ========================= */
+/* LIST MANAGEMENT */
+/* ========================= */
+
+.pt-list-management {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pt-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.pt-list-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pt-create-list-btn {
+    padding: 8px 16px;
+    background: #5865f2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.pt-create-list-btn:hover {
+    background: #4752c4;
+}
+
+.pt-create-list-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #2b2d31;
+    border-radius: 8px;
+}
+
+.pt-create-list-form input {
+    flex: 1;
+    background: #1e1f22;
+    border: 1px solid #35373c;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #f2f3f5;
+    font-size: 13px;
+}
+
+.pt-create-list-form input:focus {
+    outline: none;
+    border-color: #5865f2;
+}
+
+.pt-create-list-form button {
+    padding: 8px 16px;
+    background: #5865f2;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pt-create-list-form button:hover {
+    background: #4752c4;
+}
+
+.pt-create-list-form button:last-child {
+    background: #35373c;
+}
+
+.pt-create-list-form button:last-child:hover {
+    background: #42454b;
+}
+
+.pt-lists-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.pt-list-section {
+    background: #2b2d31;
+    border: 1px solid #35373c;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.pt-list-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #35373c;
+}
+
+.pt-list-title h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pt-delete-list-btn {
+    background: #35373c;
+    border: none;
+    border-radius: 6px;
+    color: #f2f3f5;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.15s ease;
+}
+
+.pt-delete-list-btn:hover {
+    background: #42454b;
+}
+
+.pt-list-games {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pt-empty-list {
+    color: #949ba4;
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+    padding: 24px;
+}
+
+.pt-list-game-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    background: #1e1f22;
+    border-radius: 8px;
+    border: 1px solid #35373c;
+}
+
+.pt-game-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.pt-game-cover,
+.pt-game-cover-placeholder {
+    width: 60px;
+    height: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: #16171a;
+    flex-shrink: 0;
+}
+
+.pt-game-cover-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(160deg, #5865f2, #2b2d31);
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.pt-game-info div {
+    flex: 1;
+    min-width: 0;
+}
+
+.pt-game-info h5 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pt-game-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #949ba4;
+}
+
+.pt-game-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.pt-rating-buttons {
+    display: flex;
+    gap: 4px;
+    flex-wrap: nowrap;
+}
+
+.pt-rating-buttons button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    background: #35373c;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.15s;
+    flex-shrink: 0;
+}
+
+.pt-rating-buttons button:hover {
+    background: #5865f2;
+}
+
+.pt-rating-buttons button.active {
+    background: #5865f2;
+}
+
+.pt-remove-game-btn {
+    padding: 6px 12px;
+    background: #35373c;
+    border: none;
+    border-radius: 6px;
+    color: #f2f3f5;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.pt-remove-game-btn:hover {
+    background: #42454b;
+}
+
+.pt-add-games {
+    padding-top: 16px;
+    border-top: 1px solid #35373c;
+}
+
+.pt-add-games p {
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: #b5bac1;
+}
+
+.pt-game-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pt-add-game-btn {
+    padding: 6px 12px;
+    background: #5865f2;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.pt-add-game-btn:hover {
+    background: #4752c4;
+}
+
+.pt-search-add-games {
+    margin-bottom: 16px;
+}
+
+.pt-search-input {
+    width: 100%;
+    padding: 8px 12px;
+    background: #1e1f22;
+    border: 1px solid #35373c;
+    border-radius: 6px;
+    color: #f2f3f5;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.pt-search-input:focus {
+    outline: none;
+    border-color: #5865f2;
+}
+
+.pt-list-game-row-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.15s ease;
+}
+
+.pt-list-game-row-link:hover {
+    transform: translateY(-2px);
+}
+
+.pt-list-game-row-link:hover .pt-list-game-row {
+    border-color: #5865f2;
+}

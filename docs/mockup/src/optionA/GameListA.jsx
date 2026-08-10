@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 
 import { games } from "/resources/gameData.js";
 import { steamCoverUrl } from "../utils/steam";
@@ -30,6 +30,23 @@ export default function GameListA() {
         return JSON.parse(sessionStorage.getItem("gameTracker") || "{}");
     });
 
+    const [searchQuery, setSearchQuery] = useState("");
+
+    // Sync tracker changes to Master Tracker in gameLists
+    useEffect(() => {
+        const lists = JSON.parse(sessionStorage.getItem("gameLists") || '{"default": {"name": "Master Tracker", "games": {}}}');
+        
+        // Update Master Tracker games to match tracker ratings
+        lists.default.games = {};
+        Object.entries(tracker).forEach(([gameId, data]) => {
+            if (data.score) {
+                lists.default.games[gameId] = { rating: data.score };
+            }
+        });
+
+        sessionStorage.setItem("gameLists", JSON.stringify(lists));
+    }, [tracker]);
+
     function updateGame(id, changes) {
         setTracker((prev) => {
             const next = {
@@ -39,6 +56,14 @@ export default function GameListA() {
                     ...changes,
                 },
             };
+
+            // Remove from tracker if score is cleared
+            if (changes.score !== undefined && changes.score === null) {
+                delete next[id];
+            } else if (changes.score !== undefined && changes.score !== null && !next[id].status) {
+                // Auto-set status when adding a score
+                next[id].status = "Plan to Play";
+            }
 
             sessionStorage.setItem(
                 "gameTracker",
@@ -55,15 +80,25 @@ export default function GameListA() {
         );
     }, [communityScores]);
 
+    const filteredGames = useMemo(() => {
+        if (!searchQuery.trim()) return rankedGames;
+        
+        const query = searchQuery.toLowerCase();
+        return rankedGames.filter(
+            (game) =>
+                game.title.toLowerCase().includes(query) ||
+                game.platform.toLowerCase().includes(query)
+        );
+    }, [rankedGames, searchQuery]);
+
     return (
         <div className="gl-page">
-            <Link className="gl-back" to="/">
-                ← Back to menu
-            </Link>
-
-            <div style={{ marginTop: 20, marginBottom: 20 }}>
-                <Link className="gl-back" to="/OptionA/tracker">
-                    📋 My Personal List
+            <div className="gl-nav-header">
+                <Link className="gl-back" to="/">
+                    ← Back to menu
+                </Link>
+                <Link className="gl-personal-list" to="/OptionA/tracker">
+                    📋 My Lists
                 </Link>
             </div>
 
@@ -72,8 +107,18 @@ export default function GameListA() {
                 <p>Community rankings with your personal tracker</p>
             </header>
 
+            <div className="gl-search-container">
+                <input
+                    type="text"
+                    className="gl-search-input"
+                    placeholder="Search games..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
+            </div>
+
             <div className="gl-list">
-                {rankedGames.map((game, index) => {
+                {filteredGames.map((game, index) => {
                     const cover = game.steam
                         ? steamCoverUrl(game.steam)
                         : game.banner;
@@ -117,7 +162,7 @@ export default function GameListA() {
                                 </div>
                             </Link>
 
-                            <div className="gl-tracker">
+                            <div className="gl-tracker" onClick={(e) => e.stopPropagation()}>
                                 <select
                                     value={myGame.status || ""}
                                     onChange={(e) =>

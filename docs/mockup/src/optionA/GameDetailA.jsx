@@ -17,6 +17,11 @@ export default function GameDetailA() {
         JSON.parse(sessionStorage.getItem("gameTracker") || "{}")
     );
 
+    const [lists, setLists] = useState(() => {
+        const saved = sessionStorage.getItem("gameLists");
+        return saved ? JSON.parse(saved) : { default: { name: "Master Tracker", games: {} } };
+    });
+
     if (!game) {
         return (
             <div className="gd-page">
@@ -47,6 +52,12 @@ export default function GameDetailA() {
         );
     }
 
+    // Get custom lists (excluding Master Tracker) where this game is included
+    const customListsWithGame = Object.entries(lists)
+        .filter(([listId]) => listId !== "default")
+        .filter(([, list]) => list.games[game.id])
+        .map(([listId, list]) => ({ listId, ...list }));
+
     const hasSteam = !!game.steam;
 
     const bannerSrc = hasSteam
@@ -66,7 +77,7 @@ export default function GameDetailA() {
             </Link>
 
             <div className="gd-card">
-                <div>
+                <div className="gd-banner-container">
                     {bannerSrc ? (
                         <img
                             className="gd-banner"
@@ -81,22 +92,20 @@ export default function GameDetailA() {
                 </div>
 
                 <div className="gd-info">
-                    <h1>{game.title}</h1>
+                    <div className="gd-header">
+                        <h1>{game.title}</h1>
+                        <p className="gd-platform">{game.platform}</p>
+                        <p className="gd-release">{releaseDate}</p>
+                    </div>
 
-                    <p className="gd-platform">
-                        {game.platform}
-                    </p>
-
-                    <p className="gd-release">
-                        Released: {releaseDate}
-                    </p>
-
-                    <div className="gd-section">
-                        <h2>My List</h2>
+                    <div className="gd-section gd-master-tracker-section">
+                        <div className="gd-section-header">
+                            <h2>🎯 Master Tracker</h2>
+                            <p className="gd-section-description">Your main tracking data for this game</p>
+                        </div>
 
                         <div className="gd-field">
                             <label>Status</label>
-
                             <select
                                 value={myGame.status || ""}
                                 onChange={(e) =>
@@ -118,13 +127,13 @@ export default function GameDetailA() {
 
                         <div className="gd-field">
                             <label>My Score</label>
-
                             <div className="gd-score">
                                 <button
                                     className={!myGame.score ? "active" : ""}
                                     onClick={() =>
                                         updateGame({ score: null })
                                     }
+                                    title="No score"
                                 >
                                     -
                                 </button>
@@ -142,12 +151,54 @@ export default function GameDetailA() {
                                                 score: i + 1,
                                             })
                                         }
+                                        title={`Rating: ${i + 1}`}
                                     >
                                         {i + 1}
                                     </button>
                                 ))}
                             </div>
                         </div>
+                    </div>
+
+                    {customListsWithGame.length > 0 && (
+                        <div className="gd-section gd-custom-lists-section">
+                            <div className="gd-section-header">
+                                <h2>📚 In Your Lists</h2>
+                                <p className="gd-section-description">Custom lists where this game is tracked</p>
+                            </div>
+                            <div className="gd-custom-lists">
+                                {customListsWithGame.map(({ listId, name, games: listGames }) => {
+                                    const gameInList = listGames[game.id];
+                                    return (
+                                        <div key={listId} className="gd-custom-list-item">
+                                            <div className="gd-custom-list-info">
+                                                <h4>{name}</h4>
+                                                <div className="gd-list-rating-badge">
+                                                    {gameInList?.rating ? (
+                                                        <>
+                                                            <span className="gd-rating-stars">★</span>
+                                                            <span className="gd-rating-num">{gameInList.rating}/10</span>
+                                                        </>
+                                                    ) : (
+                                                        <span className="gd-rating-none">Not rated</span>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="gd-section gd-action-section">
+                        <div className="gd-section-header">
+                            <h2>⚙️ Manage</h2>
+                        </div>
+                        <p className="gd-action-text">Edit this game in your custom lists and collections</p>
+                        <Link to="/OptionA/tracker" className="gd-lists-link">
+                            Go to My Lists →
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -2,17 +2,19 @@ import { Link } from "react-router-dom";
 import { useState, useMemo } from "react";
 
 import { games } from "/resources/gameData.js";
+import { gameAbstractions } from "/resources/gameAbstractions.js";
+import { getDisplayGameForAbstraction } from "../utils/abstractionHelpers.js";
 import { steamCoverUrl } from "../utils/steam";
 
 import "../PersonalTracker.css";
 
-export default function PersonalTrackerA() {
+export default function PersonalTrackerB() {
     const [tracker, setTracker] = useState(() =>
-        JSON.parse(sessionStorage.getItem("gameTracker") || "{}")
+        JSON.parse(sessionStorage.getItem("gameTrackerB") || "{}")
     );
 
     const [lists, setLists] = useState(() => {
-        const saved = sessionStorage.getItem("gameLists");
+        const saved = sessionStorage.getItem("gameListsB");
         return saved ? JSON.parse(saved) : { default: { name: "Master Tracker", games: {} } };
     });
 
@@ -22,14 +24,14 @@ export default function PersonalTrackerA() {
 
     function createNewList(name) {
         if (!name.trim()) return;
-        
+
         const listId = `list_${Date.now()}`;
         setLists((prev) => {
             const next = {
                 ...prev,
                 [listId]: { name, games: {} },
             };
-            sessionStorage.setItem("gameLists", JSON.stringify(next));
+            sessionStorage.setItem("gameListsB", JSON.stringify(next));
             return next;
         });
 
@@ -39,44 +41,44 @@ export default function PersonalTrackerA() {
 
     function deleteList(listId) {
         if (listId === "default") return;
-        
+
         setLists((prev) => {
             const next = { ...prev };
             delete next[listId];
-            sessionStorage.setItem("gameLists", JSON.stringify(next));
+            sessionStorage.setItem("gameListsB", JSON.stringify(next));
             return next;
         });
     }
 
-    function addGameToList(gameId, listId) {
+    function addItemToList(itemKey, listId) {
         setLists((prev) => {
             const next = { ...prev };
-            if (!next[listId].games[gameId]) {
+            if (!next[listId].games[itemKey]) {
                 // Get rating from master tracker if available
-                const masterTrackerRating = tracker[gameId]?.score || null;
-                next[listId].games[gameId] = { rating: masterTrackerRating };
+                const masterTrackerRating = tracker[itemKey]?.score || null;
+                next[listId].games[itemKey] = { rating: masterTrackerRating };
             }
-            sessionStorage.setItem("gameLists", JSON.stringify(next));
+            sessionStorage.setItem("gameListsB", JSON.stringify(next));
             return next;
         });
     }
 
-    function removeGameFromList(gameId, listId) {
+    function removeItemFromList(itemKey, listId) {
         setLists((prev) => {
             const next = { ...prev };
-            delete next[listId].games[gameId];
-            sessionStorage.setItem("gameLists", JSON.stringify(next));
+            delete next[listId].games[itemKey];
+            sessionStorage.setItem("gameListsB", JSON.stringify(next));
             return next;
         });
     }
 
-    function updateGameInList(gameId, listId, rating) {
+    function updateItemInList(itemKey, listId, rating) {
         setLists((prev) => {
             const next = { ...prev };
-            if (next[listId].games[gameId]) {
-                next[listId].games[gameId].rating = rating;
+            if (next[listId].games[itemKey]) {
+                next[listId].games[itemKey].rating = rating;
             }
-            sessionStorage.setItem("gameLists", JSON.stringify(next));
+            sessionStorage.setItem("gameListsB", JSON.stringify(next));
             return next;
         });
 
@@ -85,51 +87,76 @@ export default function PersonalTrackerA() {
             setTracker((prev) => {
                 const next = { ...prev };
                 if (rating === null) {
-                    delete next[gameId];
+                    delete next[itemKey];
                 } else {
-                    next[gameId] = {
-                        ...(prev[gameId] || {}),
+                    next[itemKey] = {
+                        ...(prev[itemKey] || {}),
                         score: rating,
                     };
-                    if (!next[gameId].status) {
-                        next[gameId].status = "Plan to Play";
+                    if (!next[itemKey].status) {
+                        next[itemKey].status = "Plan to Play";
                     }
                 }
-                sessionStorage.setItem("gameTracker", JSON.stringify(next));
+                sessionStorage.setItem("gameTrackerB", JSON.stringify(next));
                 return next;
             });
         }
     }
 
-    // Only show games that have a score in master tracker
-    const masterTrackerGames = useMemo(() => {
-        return games
-            .filter((game) => lists.default.games[game.id]?.rating)
+    // Trackable entities: every concept/abstraction, plus only the games
+    // that AREN'T part of any concept. Individual games that belong to a
+    // collection are never surfaced here - only the collection itself is.
+    const trackableItems = useMemo(() => {
+        const items = [];
+        const memberIds = new Set();
+
+        Object.entries(gameAbstractions).forEach(([key, abstraction]) => {
+            const displayGame = getDisplayGameForAbstraction(games, key);
+            if (displayGame) {
+                items.push({ type: "abstraction", key, abstraction, game: displayGame });
+            }
+            abstraction.gameIds.forEach((id) => memberIds.add(id));
+        });
+
+        games.forEach((game) => {
+            if (!memberIds.has(game.id)) {
+                items.push({ type: "game", key: game.id, game });
+            }
+        });
+
+        return items;
+    }, []);
+
+    // Only show items that have a score in the master tracker list
+    const masterTrackerItems = useMemo(() => {
+        return trackableItems
+            .filter((item) => lists.default.games[item.key]?.rating)
             .sort((a, b) => {
-                const scoreA = lists.default.games[a.id]?.rating ?? 0;
-                const scoreB = lists.default.games[b.id]?.rating ?? 0;
+                const scoreA = lists.default.games[a.key]?.rating ?? 0;
+                const scoreB = lists.default.games[b.key]?.rating ?? 0;
                 return scoreB - scoreA;
             });
-    }, [lists.default.games]);
+    }, [trackableItems, lists.default.games]);
 
-    // Filter games based on search query per list
-    const getFilteredAvailableGames = (listId) => {
+    // Filter items based on search query per list
+    const getFilteredAvailableItems = (listId) => {
         const query = (searchQueries[listId] || "").toLowerCase();
-        
-        return masterTrackerGames.filter((game) => {
-            const isNotInList = !lists[listId].games[game.id];
+
+        return masterTrackerItems.filter((item) => {
+            const isNotInList = !lists[listId].games[item.key];
+            const title = item.type === "abstraction" ? item.abstraction.name : item.game.title;
             const matchesQuery =
                 !query ||
-                game.title.toLowerCase().includes(query) ||
-                game.platform.toLowerCase().includes(query);
-            
+                title.toLowerCase().includes(query) ||
+                item.game.platform.toLowerCase().includes(query);
+
             return isNotInList && matchesQuery;
         });
     };
 
     return (
         <div className="pt-page">
-            <Link className="pt-back" to="/OptionA">
+            <Link className="pt-back" to="/OptionB">
                 ← Back to Top Games
             </Link>
 
@@ -177,7 +204,7 @@ export default function PersonalTrackerA() {
 
                 <div className="pt-lists-tabs">
                     {Object.entries(lists).map(([listId, list]) => {
-                        const availableGames = getFilteredAvailableGames(listId);
+                        const availableItems = getFilteredAvailableItems(listId);
 
                         return (
                             <div key={listId} className="pt-list-section">
@@ -197,18 +224,28 @@ export default function PersonalTrackerA() {
                                     {Object.keys(list.games).length === 0 ? (
                                         <p className="pt-empty-list">No games in this list</p>
                                     ) : (
-                                        Object.entries(list.games).map(([gameId, gameData]) => {
-                                            const game = games.find(g => g.id === gameId);
-                                            if (!game) return null;
+                                        Object.entries(list.games).map(([itemKey, gameData]) => {
+                                            const item = trackableItems.find((t) => t.key === itemKey);
+                                            if (!item) return null;
 
-                                            const cover = game.steam
-                                                ? steamCoverUrl(game.steam)
-                                                : game.banner;
+                                            const displayName =
+                                                item.type === "abstraction"
+                                                    ? item.abstraction.name
+                                                    : item.game.title;
+
+                                            const cover = item.game.steam
+                                                ? steamCoverUrl(item.game.steam)
+                                                : item.game.banner;
+
+                                            const linkPath =
+                                                item.type === "abstraction"
+                                                    ? `/OptionB/abstraction/${itemKey}`
+                                                    : `/OptionB/game/${itemKey}`;
 
                                             return (
                                                 <Link
-                                                    key={gameId}
-                                                    to={`/OptionA/game/${gameId}`}
+                                                    key={itemKey}
+                                                    to={linkPath}
                                                     className="pt-list-game-row-link"
                                                 >
                                                     <div className="pt-list-game-row">
@@ -216,17 +253,17 @@ export default function PersonalTrackerA() {
                                                             {cover ? (
                                                                 <img
                                                                     src={cover}
-                                                                    alt={game.title}
+                                                                    alt={displayName}
                                                                     className="pt-game-cover"
                                                                 />
                                                             ) : (
                                                                 <div className="pt-game-cover-placeholder">
-                                                                    {game.title.charAt(0)}
+                                                                    {displayName.charAt(0)}
                                                                 </div>
                                                             )}
                                                             <div>
-                                                                <h5>{game.title}</h5>
-                                                                <p>{game.platform}</p>
+                                                                <h5>{displayName}</h5>
+                                                                <p>{item.game.platform}</p>
                                                             </div>
                                                         </div>
 
@@ -235,7 +272,7 @@ export default function PersonalTrackerA() {
                                                                 <button
                                                                     className={!gameData.rating ? "active" : ""}
                                                                     onClick={() =>
-                                                                        updateGameInList(gameId, listId, null)
+                                                                        updateItemInList(itemKey, listId, null)
                                                                     }
                                                                 >
                                                                     -
@@ -250,7 +287,7 @@ export default function PersonalTrackerA() {
                                                                                 : ""
                                                                         }
                                                                         onClick={() =>
-                                                                            updateGameInList(gameId, listId, i + 1)
+                                                                            updateItemInList(itemKey, listId, i + 1)
                                                                         }
                                                                     >
                                                                         {i + 1}
@@ -261,7 +298,7 @@ export default function PersonalTrackerA() {
                                                             <button
                                                                 className="pt-remove-game-btn"
                                                                 onClick={() =>
-                                                                    removeGameFromList(gameId, listId)
+                                                                    removeItemFromList(itemKey, listId)
                                                                 }
                                                             >
                                                                 Remove
@@ -274,7 +311,7 @@ export default function PersonalTrackerA() {
                                     )}
                                 </div>
 
-                                {availableGames.length > 0 && (
+                                {availableItems.length > 0 && (
                                     <div className="pt-add-games">
                                         <div className="pt-search-add-games">
                                             <input
@@ -292,16 +329,15 @@ export default function PersonalTrackerA() {
                                         </div>
                                         <p>Add tracked games to this list:</p>
                                         <div className="pt-game-buttons">
-                                            {availableGames.map(game => (
+                                            {availableItems.map((item) => (
                                                 <button
-                                                    key={game.id}
+                                                    key={item.key}
                                                     className="pt-add-game-btn"
-                                                    onClick={() => addGameToList(game.id, listId)}
+                                                    onClick={() => addItemToList(item.key, listId)}
                                                 >
-                                                    + {game.title}
+                                                    + {item.type === "abstraction" ? item.abstraction.name : item.game.title}
                                                 </button>
-                                            ))
-                                            }
+                                            ))}
                                         </div>
                                     </div>
                                 )}

@@ -12,6 +12,8 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
+    margin-bottom: 24px;
+    display: inline-block;
 }
 
 .gd-back:hover {
@@ -20,17 +22,16 @@
 
 .gd-card {
     max-width: 1000px;
-    margin: 36px auto;
-
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 460px 1fr;
-    gap: 36px;
+    gap: 40px;
 }
 
 .gd-banner {
     width: 100%;
     aspect-ratio: 460 / 215;
-    border-radius: 14px;
+    border-radius: 8px;
     object-fit: cover;
     background: #16171a;
 }
@@ -38,62 +39,82 @@
 .gd-placeholder {
     width: 100%;
     aspect-ratio: 460 / 215;
-
-    border-radius: 14px;
-
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: linear-gradient(160deg,#5865f2,#2b2d31);
-
+    background: linear-gradient(160deg, #5865f2, #2b2d31);
     font-size: 72px;
     font-weight: bold;
 }
 
 .gd-info h1 {
-    margin: 0;
-    font-size: 34px;
+    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .gd-platform {
-    margin: 10px 0;
+    margin: 0 0 4px;
     color: #949ba4;
+    font-size: 14px;
 }
 
 .gd-release {
-    color: #dbdee1;
-    margin-bottom: 30px;
+    color: #949ba4;
+    margin: 0 0 24px;
+    font-size: 13px;
 }
 
 .gd-section {
-    margin-top: 30px;
+    background: #2b2d31;
+    border: 1px solid #35373c;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .gd-section h2 {
-    margin-bottom: 16px;
-    font-size: 22px;
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.gd-section-description {
+    margin: 0 0 16px;
+    font-size: 12px;
+    color: #949ba4;
 }
 
 .gd-field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+}
+
+.gd-field:last-of-type {
+    margin-bottom: 0;
 }
 
 .gd-field label {
     margin-bottom: 6px;
     color: #b5bac1;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .gd-field select {
-    background: #2b2d31;
+    background: #1e1f22;
     color: white;
     border: 1px solid #35373c;
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 10px;
     font-size: 14px;
+}
+
+.gd-field select:focus {
+    outline: none;
+    border-color: #5865f2;
 }
 
 .gd-score {
@@ -105,28 +126,90 @@
 .gd-score button {
     width: 40px;
     height: 40px;
-
-    border: none;
-    border-radius: 8px;
-
-    background: #35373c;
-    color: white;
-
+    border: 1px solid #35373c;
+    border-radius: 6px;
+    background: #1e1f22;
+    color: #dbdee1;
+    font-weight: 600;
     cursor: pointer;
-
-    transition: .15s;
+    font-size: 13px;
+    transition: background 0.15s ease, border-color 0.15s ease;
 }
 
 .gd-score button:hover {
     background: #5865f2;
+    border-color: #5865f2;
+    color: white;
 }
 
 .gd-score button.active {
     background: #5865f2;
+    border-color: #5865f2;
+    color: white;
+}
+
+.gd-custom-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gd-custom-list-item {
+    background: #1e1f22;
+    border: 1px solid #35373c;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gd-custom-list-item h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.gd-list-rating-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    background: #5865f2;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.gd-rating-none {
+    color: #949ba4;
+    font-size: 12px;
+}
+
+.gd-lists-link {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #5865f2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.15s ease;
+}
+
+.gd-lists-link:hover {
+    background: #4752c4;
 }
 
 @media (max-width: 850px) {
     .gd-card {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .gd-info h1 {
+        font-size: 28px;
     }
 }
