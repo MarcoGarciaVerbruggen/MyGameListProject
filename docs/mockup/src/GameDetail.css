@@ -20,12 +20,14 @@
     color: #f2f3f5;
 }
 
-.gd-card {
+/* Hero row: image on the left, rating card on the right */
+.gd-hero {
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 460px 1fr;
     gap: 40px;
+    align-items: start;
 }
 
 .gd-banner {
@@ -46,6 +48,19 @@
     background: linear-gradient(160deg, #5865f2, #2b2d31);
     font-size: 72px;
     font-weight: bold;
+}
+
+/* Body: everything else, single centered column below the hero */
+.gd-body {
+    max-width: 640px;
+    margin: 32px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gd-header {
+    text-align: center;
 }
 
 .gd-info h1 {
@@ -71,7 +86,6 @@
     border: 1px solid #35373c;
     border-radius: 8px;
     padding: 20px;
-    margin-bottom: 20px;
 }
 
 .gd-section h2 {
@@ -84,6 +98,12 @@
     margin: 0 0 16px;
     font-size: 12px;
     color: #949ba4;
+}
+
+.gd-action-text {
+    color: #b5bac1;
+    font-size: 13px;
+    margin: 0 0 12px;
 }
 
 .gd-field {
@@ -103,7 +123,8 @@
     font-weight: 600;
 }
 
-.gd-field select {
+.gd-field select,
+.gd-field input {
     background: #1e1f22;
     color: white;
     border: 1px solid #35373c;
@@ -112,11 +133,14 @@
     font-size: 14px;
 }
 
-.gd-field select:focus {
+.gd-field select:focus,
+.gd-field input:focus {
     outline: none;
     border-color: #5865f2;
 }
 
+/* The single rating design used everywhere: standalone games, a
+   concept's overall rating, and every member game inside a concept. */
 .gd-score {
     display: flex;
     gap: 8px;
@@ -148,6 +172,13 @@
     color: white;
 }
 
+/* Compact variant of the same rating design, for use inside list rows */
+.gd-score.small button {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+}
+
 .gd-custom-lists {
     display: flex;
     flex-direction: column;
@@ -162,6 +193,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .gd-custom-list-item h4 {
@@ -204,9 +237,8 @@
 }
 
 @media (max-width: 850px) {
-    .gd-card {
+    .gd-hero {
         grid-template-columns: 1fr;
-        gap: 24px;
     }
 
     .gd-info h1 {

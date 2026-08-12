@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#27 option A mostly setup">
-      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionB/GameConceptB.jsx" afterDir="false" />
+    <list default="true" id="c3e7241b-8e4d-4ef6-b6d4-5ac508a0b654" name="Changes" comment="#27 option A done, option B mostly done">
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionC/GameConceptC.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mockup/src/optionC/PersonalTrackerC.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mockup/resources/gameData.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/resources/gameData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/mockup/src/GameDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/GameDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mockup/src/GameList.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/GameList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mockup/src/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/Menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mockup/src/PersonalTracker.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/PersonalTracker.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionA/GameDetailA.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionA/GameDetailA.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionA/GameListA.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionA/GameListA.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionA/PersonalTrackerA.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionA/PersonalTrackerA.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionB/GameConceptB.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionB/GameConceptB.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionB/GameDetailB.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionB/GameDetailB.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionB/GameListB.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionB/GameListB.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionB/OptionB.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionC/GameDetailC.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionC/GameDetailC.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mockup/src/optionC/GameListC.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mockup/src/optionC/GameListC.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,60 +68,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000421188368747" />
-      <entry key="S5" value="1.0560995103424935" />
-      <entry key="S10" value="1.6386287803617439" />
-      <entry key="S30" value="5.69101484657602" />
-      <entry key="S60" value="11.398955212661223" />
-      <entry key="M2" value="19.098566479038208" />
-      <entry key="M5" value="31.900733452452954" />
-      <entry key="M10" value="49.445816400754346" />
-      <entry key="M15" value="84.81099014313159" />
-      <entry key="M30" value="303.8713409620673" />
-      <entry key="H1" value="835.4654954924628" />
-      <entry key="H2" value="1543.719034011793" />
-      <entry key="H4" value="2202.393489693781" />
-      <entry key="D1" value="3137.36116956798" />
-      <entry key="W1" value="3363.600686661051" />
+      <entry key="MS500" value="1.0000290724607321" />
+      <entry key="S2" value="1.0779097159734845" />
+      <entry key="S5" value="1.6409594882085596" />
+      <entry key="S10" value="3.317264229164449" />
+      <entry key="S30" value="9.841570746540057" />
+      <entry key="S60" value="17.03601086123266" />
+      <entry key="M2" value="26.327641029498132" />
+      <entry key="M5" value="40.96787966544875" />
+      <entry key="M10" value="59.309343109430756" />
+      <entry key="M15" value="94.50791585553138" />
+      <entry key="M30" value="312.0011507139539" />
+      <entry key="H1" value="842.2240588457354" />
+      <entry key="H2" value="1550.8922639147886" />
+      <entry key="H4" value="2210.953512857154" />
+      <entry key="D1" value="3148.544885999459" />
+      <entry key="W1" value="3375.475675249444" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.175490559538807E-187" />
-      <entry key="S2" value="2.8032889526610984E-47" />
-      <entry key="S5" value="2.393685815258125E-19" />
-      <entry key="S10" value="4.892531789526189E-10" />
-      <entry key="S30" value="7.943535085669585E-4" />
-      <entry key="S60" value="0.03201606658035276" />
-      <entry key="M2" value="0.2729373167855673" />
-      <entry key="M5" value="1.2688952634383315" />
-      <entry key="M10" value="2.2266282396782073" />
-      <entry key="M15" value="2.699988259653538" />
-      <entry key="M30" value="3.28296486900462" />
-      <entry key="H1" value="3.6914016027866126" />
-      <entry key="H2" value="4.588413527692414" />
-      <entry key="H4" value="6.650643419803006" />
-      <entry key="D1" value="12.026596484570824" />
-      <entry key="W1" value="13.690716527382074" />
+      <entry key="MS500" value="2.075109614729214E-206" />
+      <entry key="S2" value="3.795423660692284E-52" />
+      <entry key="S5" value="2.7021167168318917E-21" />
+      <entry key="S10" value="5.1981898298743375E-11" />
+      <entry key="S30" value="3.7622990345246096E-4" />
+      <entry key="S60" value="0.02203371466002087" />
+      <entry key="M2" value="0.22642417341945237" />
+      <entry key="M5" value="1.1775238860401835" />
+      <entry key="M10" value="2.144962418778037" />
+      <entry key="M15" value="2.6335598476977014" />
+      <entry key="M30" value="3.2423276028649877" />
+      <entry key="H1" value="3.668483968827158" />
+      <entry key="H2" value="4.574148038163809" />
+      <entry key="H4" value="6.640296865348719" />
+      <entry key="D1" value="12.023476120506173" />
+      <entry key="W1" value="13.690209023974376" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5596356570841318E-11" />
-      <entry key="MS500" value="0.00689611715852074" />
-      <entry key="S2" value="0.2882129383206347" />
-      <entry key="S5" value="0.663547097370619" />
-      <entry key="S10" value="1.4153560826688223" />
-      <entry key="S30" value="5.605150692191255" />
-      <entry key="S60" value="11.376674505168415" />
-      <entry key="M2" value="19.32052584102132" />
-      <entry key="M5" value="33.11844476625176" />
-      <entry key="M10" value="51.63317937027161" />
-      <entry key="M15" value="87.48007622084465" />
-      <entry key="M30" value="307.13520433783384" />
-      <entry key="H1" value="839.1454768067092" />
-      <entry key="H2" value="1548.300505153365" />
-      <entry key="H4" value="2209.039746557222" />
-      <entry key="D1" value="3149.3866820271146" />
-      <entry key="W1" value="3377.2912328761777" />
+      <entry key="MS100" value="0.8827029962906549" />
+      <entry key="MS500" value="0.9753839356857837" />
+      <entry key="S2" value="1.0712664737464122" />
+      <entry key="S5" value="1.631006135011665" />
+      <entry key="S10" value="3.2834961839729586" />
+      <entry key="S30" value="9.789779348828771" />
+      <entry key="S60" value="17.013008523780275" />
+      <entry key="M2" value="26.507263371147033" />
+      <entry key="M5" value="42.09591467213209" />
+      <entry key="M10" value="61.41545189526683" />
+      <entry key="M15" value="97.11064061041748" />
+      <entry key="M30" value="315.2242628492487" />
+      <entry key="H1" value="845.8810172572672" />
+      <entry key="H2" value="1555.4594028242514" />
+      <entry key="H4" value="2217.589385766589" />
+      <entry key="D1" value="3160.5672709967353" />
+      <entry key="W1" value="3389.1657129131204" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -222,7 +218,8 @@
       <workItem from="1785925118849" duration="11564000" />
       <workItem from="1786354929768" duration="8584000" />
       <workItem from="1786379416570" duration="5103000" />
-      <workItem from="1786402160371" duration="3034000" />
+      <workItem from="1786402160371" duration="3886000" />
+      <workItem from="1786489231147" duration="4546000" />
     </task>
     <task id="LOCAL-00001" summary="spring project setup">
       <option name="closed" value="true" />
@@ -264,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785936811448</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="#27 option A done, option B mostly done">
+      <option name="closed" value="true" />
+      <created>1786406247196</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1786406247196</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +281,7 @@
     <MESSAGE value="initial pipeline configuration + daily meeting User Story template" />
     <MESSAGE value="#27 initial mockup commit" />
     <MESSAGE value="#27 option A mostly setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="#27 option A mostly setup" />
+    <MESSAGE value="#27 option A done, option B mostly done" />
+    <option name="LAST_COMMIT_MESSAGE" value="#27 option A done, option B mostly done" />
   </component>
 </project>
